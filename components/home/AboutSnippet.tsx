@@ -6,20 +6,20 @@ import { fadeInUp, staggerContainer, viewport } from "@/lib/animations";
 
 export default function AboutSnippet() {
   return (
-    <section className="max-w-content mx-auto px-20 max-md:px-6 py-section border-t border-border">
+    <section className="max-w-content mx-auto px-20 max-md:px-6 py-24 md:py-section border-t border-border">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
-        className="grid md:grid-cols-2 gap-16 items-start"
+        className="grid md:grid-cols-2 gap-12 md:gap-16 items-start"
       >
         {/* Left */}
         <div className="flex flex-col gap-6">
           <motion.p variants={fadeInUp} className="t-label text-gray-2">
             About
           </motion.p>
-          <motion.h2 variants={fadeInUp} className="t-h1 text-white leading-tight">
+          <motion.h2 variants={fadeInUp} className="t-h1 text-white leading-tight text-balance">
             공간이 말을<br />할 때까지.
           </motion.h2>
         </div>
@@ -41,7 +41,7 @@ export default function AboutSnippet() {
           <motion.div variants={fadeInUp} className="pt-2">
             <Link
               href="/about"
-              className="t-label text-cobalt-light hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+              className="inline-flex t-label text-cobalt-light hover:text-white transition-colors duration-200 items-center gap-2 group border border-cobalt-light/30 px-4 py-2 hover:border-white/40"
             >
               MORE ABOUT ME
               <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
