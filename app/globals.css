@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 /* ── Fonts ──────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
 /* ── Design Tokens ──────────────────────────────────────────── */
@@ -108,6 +107,32 @@ body {
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 0.12em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .t-display {
+    font-size: 44px;
+    line-height: 1.12;
+  }
+
+  .t-h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .t-h2 {
+    font-size: 26px;
+  }
+
+  .t-h3 {
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+
+  .t-label {
+    letter-spacing: 0.15em;
   }
 }
 

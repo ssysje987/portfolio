@@ -14,6 +14,7 @@ const links = [
 export default function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -21,14 +22,17 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
         scrolled ? "bg-bg/95 backdrop-blur-md" : "bg-bg/60"
       }`}
     >
-      <nav className="max-w-content mx-auto px-20 max-md:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+      <nav className="max-w-content mx-auto px-20 max-md:px-6 min-h-16 flex items-center justify-between relative">
         <Link
           href="/"
           className="t-label text-white tracking-[0.2em] hover:text-cobalt-light transition-colors duration-200"
@@ -36,8 +40,18 @@ export default function Nav() {
           SONG SEYOUNG
         </Link>
 
-        {/* Links */}
-        <ul className="flex items-center gap-10">
+        <button
+          type="button"
+          className="md:hidden t-label text-gray-2 hover:text-white transition-colors duration-200"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? "CLOSE" : "MENU"}
+        </button>
+
+        <ul className="hidden md:flex items-center gap-10">
           {links.map(({ label, href }) => {
             const isActive =
               href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -58,6 +72,31 @@ export default function Nav() {
           })}
         </ul>
       </nav>
+
+      <div
+        id="mobile-nav-menu"
+        className={`md:hidden border-t border-border overflow-hidden transition-[max-height] duration-300 ${
+          menuOpen ? "max-h-80" : "max-h-0"
+        }`}
+      >
+        <ul className="px-6 py-3 flex flex-col gap-1 bg-bg/95 backdrop-blur-md">
+          {links.map(({ label, href }) => {
+            const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+            return (
+              <li key={label}>
+                <Link
+                  href={href}
+                  className={`block py-3 t-label tracking-[0.15em] transition-colors duration-200 ${
+                    isActive ? "text-cobalt-light" : "text-gray-2 hover:text-white"
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </header>
   );
 }

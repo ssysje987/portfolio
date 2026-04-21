@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import CategoryFilter from "./CategoryFilter";
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/lib/data";
-import type { Project } from "@/lib/data";
 
 type Category = "전체" | "상업공간" | "VMD";
 

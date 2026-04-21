@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { fadeInUp, staggerContainer, viewport } from "@/lib/animations";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-end pb-20 pt-16">
+    <section className="min-h-screen flex flex-col justify-end pb-16 md:pb-20 pt-16">
       <div className="max-w-content mx-auto px-20 max-md:px-6 w-full">
         <motion.div
           variants={staggerContainer}
@@ -22,7 +22,7 @@ export default function HeroSection() {
           {/* Headline */}
           <motion.h1
             variants={fadeInUp}
-            className="t-display max-md:text-5xl text-white leading-[1.05] max-w-4xl"
+            className="t-display text-white leading-[1.05] max-w-4xl"
           >
             공간을 통해<br />
             <span className="text-cobalt-light">브랜드의 언어</span>를<br />
@@ -39,10 +39,10 @@ export default function HeroSection() {
           </motion.p>
 
           {/* CTA */}
-          <motion.div variants={fadeInUp} className="flex items-center gap-6 mt-4">
+          <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-4 md:gap-6 mt-2 md:mt-4">
             <Link
               href="/work"
-              className="px-8 py-4 bg-cobalt text-white t-label tracking-widest hover:bg-cobalt/80 transition-colors duration-300"
+              className="px-6 md:px-8 py-3.5 md:py-4 bg-cobalt text-white t-label tracking-[0.18em] border border-cobalt hover:bg-cobalt/80 transition-colors duration-300"
             >
               WORK
             </Link>
@@ -61,7 +61,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="mt-24 flex items-center gap-3"
+          className="mt-16 md:mt-24 flex items-center gap-3"
         >
           <div className="w-8 h-px bg-gray-3" />
           <span className="t-label text-gray-3">SCROLL</span>

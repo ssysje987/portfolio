@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeInUp, imageReveal, staggerContainer, viewport } from "@/lib/animations";
+import { fadeInUp, imageReveal, staggerContainer } from "@/lib/animations";
 import type { Project } from "@/lib/data";
 
 interface Props {

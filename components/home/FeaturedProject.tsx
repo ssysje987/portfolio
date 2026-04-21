@@ -9,14 +9,14 @@ const featured = projects.find((p) => p.featured)!;
 
 export default function FeaturedProject() {
   return (
-    <section className="max-w-content mx-auto px-20 max-md:px-6 py-section">
+    <section className="max-w-content mx-auto px-20 max-md:px-6 py-24 md:py-section">
       {/* Section label */}
       <motion.p
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
-        className="t-label text-gray-2 mb-12"
+        className="t-label text-gray-2 mb-8 md:mb-12"
       >
         Featured Project
       </motion.p>
@@ -32,7 +32,7 @@ export default function FeaturedProject() {
           {/* Image — large placeholder */}
           <motion.div
             variants={imageReveal}
-            className="relative w-full aspect-[16/9] bg-surface overflow-hidden"
+            className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-surface overflow-hidden"
           >
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-transparent z-10" />
@@ -48,8 +48,8 @@ export default function FeaturedProject() {
             </div>
 
             {/* Category badge */}
-            <div className="absolute top-6 right-6 z-30">
-              <span className="t-label text-gray-2 border border-border bg-bg/80 px-3 py-1.5 backdrop-blur-sm">
+            <div className="absolute top-4 right-4 md:top-6 md:right-6 z-30">
+              <span className="t-label text-gray-2 border border-border bg-bg/80 px-2.5 py-1 md:px-3 md:py-1.5 backdrop-blur-sm">
                 {featured.category}
               </span>
             </div>
@@ -58,7 +58,7 @@ export default function FeaturedProject() {
           {/* Info bar */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-8 border-t border-border"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 pt-6 md:pt-8 border-t border-border"
           >
             <div className="flex flex-col gap-2">
               <p className="t-label text-gray-2">{featured.year} — {featured.client}</p>
