@@ -8,8 +8,11 @@ const links = [
   { label: "HOME", href: "/" },
   { label: "WORK", href: "/work" },
   { label: "ABOUT", href: "/about" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "PRICING", href: "/pricing" },
+  { label: "CONTACT", href: "/contact" },
 ];
+
+
 
 export default function Nav() {
   const pathname = usePathname();
