@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { fadeInUp, staggerContainer, viewport } from "@/lib/animations";
+import { fadeInUp, staggerContainer  } from "@/lib/animations";
 
 export default function HeroSection() {
   return (
