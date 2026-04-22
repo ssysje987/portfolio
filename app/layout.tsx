@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={geist.variable}>
-      <body className="font-inter bg-bg text-body antialiased">
+      <body className={`${geist.className} bg-bg text-body antialiased`}>
         <Nav />
         <main>{children}</main>
         <Footer />
