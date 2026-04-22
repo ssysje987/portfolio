@@ -1,18 +1,9 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-
-const links = [
-  { label: "HOME", href: "/" },
-  { label: "WORK", href: "/work" },
-  { label: "ABOUT", href: "/about" },
-  { label: "PRICING", href: "/pricing" },
-  { label: "CONTACT", href: "/contact" },
-];
-
-
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -20,86 +11,72 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+  const links = [
+    { label: 'HOME', href: '/' },
+    { label: 'WORK', href: '/work' },
+    { label: 'ABOUT', href: '/about' },
+    { label: 'CONTACT', href: '/contact' },
+  ];
+
+  const linkClass = (href: string) =>
+    'text-[12px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
+    (pathname === href ? 'text-white' : 'text-[#8A8A8A] hover:text-white');
+
+  const mobileLinkClass = (href: string) =>
+    'mb-6 text-[32px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
+    (pathname === href ? 'text-white' : 'text-[#8A8A8A] hover:text-white');
+
+  let navClasses = 'sticky top-0 z-50 border-b border-[#2A2A2A] ';
+  navClasses += scrolled ? 'bg-[#0A0A0A]/95 backdrop-blur ' : 'bg-[#0A0A0A] ';
+  navClasses += 'py-6 px-20';
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
-        scrolled ? "bg-bg/95 backdrop-blur-md" : "bg-bg/60"
-      }`}
-    >
-      <nav className="max-w-content mx-auto px-20 max-md:px-6 min-h-16 flex items-center justify-between relative">
-        <Link
-          href="/"
-          className="t-label text-white tracking-[0.2em] hover:text-cobalt-light transition-colors duration-200"
-        >
-          SONG SEYOUNG
-        </Link>
-
+    <nav className={navClasses}>
+      <div className='max-w-7xl mx-auto flex items-center justify-between'>
+        <Link href='/' className='text-white text-[16px] font-medium tracking-[0.12em]'>SONG SEYOUNG</Link>
+        <div className='hidden md:flex items-center gap-10'>
+          {links.map(({ label, href }) => (
+            <Link key={href} href={href} className={linkClass(href)}>
+              {label}
+            </Link>
+          ))}
+        </div>
         <button
-          type="button"
-          className="md:hidden t-label text-gray-2 hover:text-white transition-colors duration-200"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-nav-menu"
-          aria-label="Toggle navigation menu"
+          className='md:hidden text-[#8A8A8A] hover:text-white'
+          onClick={() => setMenuOpen(true)}
+          aria-label='Open Menu'
         >
-          {menuOpen ? "CLOSE" : "MENU"}
+          <Menu size={24} />
         </button>
-
-        <ul className="hidden md:flex items-center gap-10">
-          {links.map(({ label, href }) => {
-            const isActive =
-              href === "/" ? pathname === "/" : pathname.startsWith(href);
-            return (
-              <li key={label}>
-                <Link
-                  href={href}
-                  className={`relative t-label transition-colors duration-200
-                    after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0
-                    after:bg-cobalt-light after:transition-all after:duration-200
-                    hover:after:w-full hover:text-white
-                    ${isActive ? "text-cobalt-light after:w-full" : "text-gray-2"}`}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-
-      <div
-        id="mobile-nav-menu"
-        className={`md:hidden border-t border-border overflow-hidden transition-[max-height] duration-300 ${
-          menuOpen ? "max-h-80" : "max-h-0"
-        }`}
-      >
-        <ul className="px-6 py-3 flex flex-col gap-1 bg-bg/95 backdrop-blur-md">
-          {links.map(({ label, href }) => {
-            const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
-            return (
-              <li key={label}>
-                <Link
-                  href={href}
-                  className={`block py-3 t-label tracking-[0.15em] transition-colors duration-200 ${
-                    isActive ? "text-cobalt-light" : "text-gray-2 hover:text-white"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
       </div>
-    </header>
+      {menuOpen && (
+        <div className='fixed inset-0 bg-[#0A0A0A] flex flex-col items-center justify-center z-40'>
+          <button
+            className='absolute top-8 right-8 text-[#8A8A8A] hover:text-white'
+            onClick={() => setMenuOpen(false)}
+            aria-label='Close Menu'
+          >
+            <X size={32} />
+          </button>
+          {links.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className={mobileLinkClass(href)}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 }
