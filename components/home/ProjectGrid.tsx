@@ -10,14 +10,14 @@ const gridProjects = projects.filter((p) => !p.featured).slice(0, 4);
 
 export default function ProjectGrid() {
   return (
-    <section className="max-w-content mx-auto px-20 max-md:px-6 py-section border-t border-border">
+    <section className="max-w-content mx-auto px-20 max-md:px-6 py-24 md:py-section border-t border-border">
       {/* Header */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
-        className="flex items-end justify-between mb-12"
+        className="flex items-end justify-between mb-8 md:mb-12 gap-4"
       >
         <motion.p variants={fadeInUp} className="t-label text-gray-2">
           Selected Works
@@ -25,7 +25,7 @@ export default function ProjectGrid() {
         <motion.div variants={fadeInUp}>
           <Link
             href="/work"
-            className="t-label text-gray-2 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+            className="t-label text-gray-2 hover:text-white transition-colors duration-200 flex items-center gap-2 group whitespace-nowrap"
           >
             ALL WORKS
             <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
