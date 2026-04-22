@@ -38,7 +38,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--gray-1);
-  font-family: 'Pretendard', 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Pretendard', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8;

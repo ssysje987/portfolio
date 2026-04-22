@@ -30,8 +30,8 @@ const config: Config = {
 
       // ── Font Families ────────────────────────────────────────
       fontFamily: {
-        sans: ["Pretendard", "Inter", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        sans: ["var(--font-inter)", "Pretendard", "sans-serif"],
+        inter: ["var(--font-inter)", "Pretendard", "sans-serif"],
         pretendard: ["Pretendard", "sans-serif"],
       },
 
