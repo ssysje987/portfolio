@@ -106,6 +106,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="strengths-section">
+        <div style={{
+          fontSize: '12px', letterSpacing: '0.12em',
+          color: '#1a499d', marginBottom: '24px', fontWeight: 500,
+        }}>
+          CORE STRENGTHS
+        </div>
+        <div className="strengths-grid">
+          {[
+            {
+              title: <>브랜드<br />메시지<br />공간화</>,
+              description: <>보이지 않는 브랜드의 가치를<br />고객이 경험할 수 있는 공간으로 구현</>,
+            },
+            {
+              title: <>실행력</>,
+              description: <>다수 매장 오픈 경험, 도면 검토와<br />현장 관리를 바탕으로 설계 의도를 끝까지<br />구현하는 역량</>,
+            },
+            {
+              title: <>신뢰감</>,
+              description: <>성실함과 꾸준함을 바탕으로<br />끝까지 완성도를 책임지는 태도</>,
+            },
+          ].map((item, index) => (
+            <div key={index} className="strength-item">
+              <div className="strength-circle">
+                <div className="strength-circle-rings" />
+                <div className="strength-title">{item.title}</div>
+              </div>
+              <div className="strength-line" />
+              <p className="strength-description">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',

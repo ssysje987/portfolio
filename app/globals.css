@@ -158,6 +158,97 @@ body {
   }
 }
 
+/* ── Strengths ──────────────────────────────────────────────── */
+.strengths-section {
+  padding: 80px 80px 72px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 96px;
+  align-items: start;
+}
+
+.strength-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.strength-circle {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.strength-circle-rings {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+      circle,
+      transparent 0,
+      transparent 7px,
+      rgba(255, 255, 255, 0.28) 8px,
+      rgba(255, 255, 255, 0.28) 9px
+    );
+  opacity: 0.62;
+}
+
+.strength-title {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.strength-line {
+  width: min(100%, 250px);
+  height: 1px;
+  background: #1a499d;
+  margin-bottom: 24px;
+}
+
+.strength-description {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .strengths-section {
+    padding: 64px 24px 56px;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .strength-circle {
+    width: 190px;
+    height: 190px;
+    margin-bottom: 28px;
+  }
+
+  .strength-title {
+    font-size: 28px;
+  }
+}
+
 /* ── Career ─────────────────────────────────────────────────── */
 .career-row {
   display: grid;
