@@ -56,9 +56,6 @@ export default function ProjectPage({ params }: Props) {
             {project.titleKo}
           </div>
         )}
-        <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.2em' }}>
-          {project.year}
-        </div>
       </div>
 
       <div style={{ width: '100%', aspectRatio: '16/9', position: 'relative', background: '#141414' }}>

@@ -38,7 +38,7 @@ export const projects: Project[] = [
     category: 'space',
     label: 'SPACE PLANNING',
     description: '공간 기획 · 연출',
-    thumbnail: '/images/ceramist-main.jpg',
+    thumbnail: '/images/ceramist-main.png',
     images: [
       '/images/ceramist-01.jpg',
       '/images/ceramist-02.jpg',

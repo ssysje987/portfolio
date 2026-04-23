@@ -61,7 +61,7 @@ export default function FeaturedProject() {
             className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 pt-6 md:pt-8 border-t border-border"
           >
             <div className="flex flex-col gap-2">
-              <p className="t-label text-gray-2">{featured.year} — {featured.client}</p>
+              <p className="t-label text-gray-2">{featured.client}</p>
               <h2 className="t-h1 text-white group-hover:text-cobalt-light transition-colors duration-300">
                 {featured.title}
               </h2>

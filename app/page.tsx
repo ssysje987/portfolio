@@ -54,7 +54,7 @@ export default function Home() {
             <div className="md:col-span-2 border-l border-[#2A2A2A] pl-8 flex flex-col justify-between">
               <div>
                 <div className="text-[11px] tracking-[0.3em] text-white uppercase mb-1">
-                  {featured.year} · {featured.label}
+                  {featured.label}
                 </div>
                 <h2 className="text-[36px] font-semibold text-white mb-1">
                   {featured.title}
@@ -120,8 +120,7 @@ export default function Home() {
                 <div className="text-[11px] text-white mb-4">
                   {project.description}
                 </div>
-                <div className="flex justify-between items-center text-[11px]">
-                  <span>{project.year}</span>
+                <div className="flex justify-end items-center text-[11px]">
                   <span>→</span>
                 </div>
               </div>

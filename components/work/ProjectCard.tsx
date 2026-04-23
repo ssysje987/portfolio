@@ -61,7 +61,6 @@ export default function ProjectCard({ project, variant = project.size, index }: 
               >
                 {project.title}
               </h3>
-              <span className="t-caption text-gray-2 shrink-0">{project.year}</span>
             </div>
             <p className="t-caption text-gray-2">{project.subtitle}</p>
             <div className="flex gap-2 flex-wrap mt-1">

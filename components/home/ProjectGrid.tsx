@@ -69,7 +69,6 @@ export default function ProjectGrid() {
                     <h3 className="t-h3 text-white group-hover:text-cobalt-light transition-colors duration-200">
                       {project.title}
                     </h3>
-                    <span className="t-caption text-gray-2">{project.year}</span>
                   </div>
                   <p className="t-caption text-gray-2">{project.subtitle}</p>
                 </div>
@@ -110,7 +109,6 @@ export default function ProjectGrid() {
                     <h3 className="t-h3 text-white group-hover:text-cobalt-light transition-colors duration-200 text-base">
                       {project.title}
                     </h3>
-                    <span className="t-caption text-gray-2">{project.year}</span>
                   </div>
                   <p className="t-caption text-gray-2">{project.subtitle}</p>
                 </div>

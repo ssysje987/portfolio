@@ -38,7 +38,7 @@ export default function ProjectHero({ project }: Props) {
           {/* Title block */}
           <div className="md:col-span-2 flex flex-col gap-4">
             <motion.p variants={fadeInUp} className="t-label text-gray-2">
-              {project.category} — {project.year}
+              {project.category}
             </motion.p>
             <motion.h1 variants={fadeInUp} className="t-h1 text-white leading-tight">
               {project.title}
@@ -52,7 +52,6 @@ export default function ProjectHero({ project }: Props) {
           <motion.div variants={fadeInUp} className="flex flex-col gap-6 pt-2">
             {[
               { label: "Client", value: project.client },
-              { label: "Year", value: project.year },
               { label: "Category", value: project.category },
             ].map(({ label, value }) => (
               <div key={label} className="flex flex-col gap-1">

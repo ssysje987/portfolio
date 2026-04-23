@@ -30,7 +30,7 @@ export default function WorkPage() {
             </div>
             <div className='md:col-span-2 border-l border-border p-10 flex flex-col'>
               <p className='text-[11px] text-muted tracking-[0.3em] uppercase mb-2'>
-                {featured.year} · {featured.label}
+                {featured.label}
               </p>
               <h2 className='text-3xl font-semibold text-white mb-2'>{featured.title}</h2>
               <p className='text-[13px] text-accent mb-4 tracking-[0.2em]'>{featured.titleKo}</p>
@@ -68,8 +68,7 @@ export default function WorkPage() {
                 <p className='text-[10px] text-muted tracking-[0.3em] uppercase mb-1'>{p.label}</p>
                 <h3 className='text-[14px] font-medium text-white mb-1'>{p.title}</h3>
                 <p className='text-[11px] text-white mb-4'>{p.description}</p>
-                <div className='mt-auto flex justify-between items-center text-[11px] text-muted'>
-                  <span>{p.year}</span>
+                <div className='mt-auto flex justify-end items-center text-[11px] text-muted'>
                   <span>→</span>
                 </div>
               </div>
@@ -95,8 +94,7 @@ export default function WorkPage() {
                 <p className='text-[10px] text-muted tracking-[0.3em] uppercase mb-1'>{p.label}</p>
                 <h3 className='text-[14px] font-medium text-white mb-1'>{p.title}</h3>
                 <p className='text-[11px] text-white mb-4'>{p.description}</p>
-                <div className='mt-auto flex justify-between items-center text-[11px] text-muted'>
-                  <span>{p.year}</span>
+                <div className='mt-auto flex justify-end items-center text-[11px] text-muted'>
                   <span>→</span>
                 </div>
               </div>
