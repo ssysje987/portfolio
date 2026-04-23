@@ -81,7 +81,7 @@ export default function ProjectPage({ params }: Props) {
           }}>
             PROJECT OVERVIEW
           </div>
-          <p style={{ fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 300 }}>
+          <p style={{ fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 300, whiteSpace: 'pre-line' }}>
             {project.description}
           </p>
         </div>

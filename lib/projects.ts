@@ -15,11 +15,11 @@ export const projects: Project[] = [
   {
     slug: 'node',
     title: 'NODE',
-    titleKo: '서브컬처의 교차점',
+    titleKo: '서브컬쳐의 연결점',
     year: 2026,
     category: 'featured',
     label: 'COMMERCIAL INTERIOR',
-    description: '스케이트 컬처 · 스트리트웨어 · 뮤직 · 카페가 하나의 결절점에서 교차하는 체류형 컬처 허브. 서울 중구 을지로3가.',
+    description: '스케이트 컬처 · 스트리트웨어 · 뮤직 · 카페가 하나의 연결점에서 교차하는 체류형 컬처 허브.\n서울 중구 을지로3가.',
     thumbnail: '/images/node-main.jpg',
     images: [
       '/images/node-01.jpg',

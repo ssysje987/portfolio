@@ -35,7 +35,7 @@ export default function WorkPage() {
               <h2 className='text-3xl font-semibold text-white mb-2'>{featured.title}</h2>
               <p className='text-[13px] text-accent mb-4 tracking-[0.2em]'>{featured.titleKo}</p>
               <div className='w-10 h-px bg-accent mb-4'></div>
-              <p className='text-[13px] text-white leading-relaxed mb-4'>{featured.description}</p>
+              <p className='text-[13px] text-white leading-relaxed mb-4 whitespace-pre-line'>{featured.description}</p>
               <div className='flex flex-wrap gap-2 mb-6'>
                 {featured.tags?.map((tag) => (
                   <span key={tag} className='border border-border text-[12px] text-muted px-2 py-1'>
