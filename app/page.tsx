@@ -7,7 +7,7 @@ export default function Home() {
         minHeight: 'calc(100vh - 73px)',
         backgroundImage: 'linear-gradient(90deg, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.82) 28%, rgba(10,10,10,0.34) 58%, rgba(10,10,10,0.08) 100%), url("/images/hero.jpg")',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: '62% center',
         borderBottom: '0.5px solid #2A2A2A',
         padding: '72px 80px 64px',
         display: 'flex',
