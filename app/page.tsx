@@ -139,7 +139,7 @@ export default function Home() {
           </h3>
           <div className="w-10 h-px bg-[#1E2B7A] mb-4"></div>
           <p className="text-[12px] text-[#8A8A8A] leading-[1.8]">
-            약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다. NODE는 VMD 감각과 공간 디자인이 처음 만난 결절점입니다.
+            약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
             <br />
             <span className="text-[#D5D5D5]">
               NODE는 VMD 감각과 공간 디자인이 처음 만난 결절점입니다.
