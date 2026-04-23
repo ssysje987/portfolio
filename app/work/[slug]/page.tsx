@@ -43,7 +43,7 @@ export default function ProjectPage({ params }: Props) {
             </Link>
             <div style={{
               fontSize: '12px', letterSpacing: '0.35em',
-              color: '#A5B4FC', marginBottom: '20px', fontWeight: 500,
+              color: '#1a499d', marginBottom: '20px', fontWeight: 500,
             }}>
               {project.label}
             </div>
@@ -63,7 +63,7 @@ export default function ProjectPage({ params }: Props) {
           <div className="project-overview-panel">
             <div style={{
               fontSize: '12px', letterSpacing: '0.35em',
-              color: '#A5B4FC', marginBottom: '12px', fontWeight: 500,
+              color: '#1a499d', marginBottom: '12px', fontWeight: 500,
             }}>
               PROJECT OVERVIEW
             </div>

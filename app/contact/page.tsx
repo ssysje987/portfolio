@@ -8,14 +8,14 @@ export default function ContactPage() {
       <div style={{ padding: '80px 80px 64px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
+          color: '#1a499d', marginBottom: '24px', fontWeight: 500,
         }}>
           CONTACT
         </div>
         <h1 style={{ fontSize: '52px', fontWeight: 600, lineHeight: 1, marginBottom: '24px' }}>
           GET IN TOUCH
         </h1>
-        <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
+        <div style={{ width: '48px', height: '1px', background: '#1a499d' }} />
       </div>
       <div style={{ padding: '80px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>

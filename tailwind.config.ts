@@ -16,8 +16,8 @@ const config: Config = {
           2: "#1E1E1E",
         },
         cobalt: {
-          DEFAULT: "#A5B4FC",
-          light: "#A5B4FC",
+          DEFAULT: "#1a499d",
+          light: "#1a499d",
         },
         white: "#FFFFFF",
         gray: {

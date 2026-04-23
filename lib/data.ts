@@ -28,7 +28,7 @@ export const projects: Project[] = [
     tags: ["공간 디자인", "브랜딩", "인테리어", "조명 계획"],
     featured: true,
     size: "large",
-    accentColor: "#A5B4FC",
+    accentColor: "#1a499d",
   },
   {
     slug: "maison-k",

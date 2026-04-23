@@ -10,14 +10,14 @@ export default function AboutPage() {
       <div style={{ padding: '80px 80px 64px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
+          color: '#1a499d', marginBottom: '24px', fontWeight: 500,
         }}>
           ABOUT ME
         </div>
         <h1 style={{ fontSize: '52px', fontWeight: 600, lineHeight: 1, marginBottom: '24px' }}>
           ABOUT ME
         </h1>
-        <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
+        <div style={{ width: '48px', height: '1px', background: '#1a499d' }} />
       </div>
 
       <div style={{
@@ -47,7 +47,7 @@ export default function AboutPage() {
           }}>
             SONG SEYOUNG
           </div>
-          <div style={{ width: '30px', height: '1px', background: '#A5B4FC', marginBottom: '12px' }} />
+          <div style={{ width: '30px', height: '1px', background: '#1a499d', marginBottom: '12px' }} />
           <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.15em' }}>
             송세영
           </div>
@@ -56,9 +56,9 @@ export default function AboutPage() {
         <div>
           <h2 style={{ fontSize: '22px', fontWeight: 500, lineHeight: 1.4, marginBottom: '24px' }}>
             리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
-            <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
+            <span style={{ color: '#1a499d' }}>공간 디자이너</span>
           </h2>
-          <div style={{ width: '40px', height: '1px', background: '#A5B4FC', marginBottom: '24px' }} />
+          <div style={{ width: '40px', height: '1px', background: '#1a499d', marginBottom: '24px' }} />
           <p style={{
             fontSize: '14px', color: '#FFFFFF',
             lineHeight: 1.9, fontWeight: 300, marginBottom: '24px',
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+          color: '#1a499d', marginBottom: '48px', fontWeight: 500,
         }}>
           CAREER
         </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+          color: '#1a499d', marginBottom: '48px', fontWeight: 500,
         }}>
           SKILL
         </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+          color: '#1a499d', marginBottom: '48px', fontWeight: 500,
         }}>
           CONTACT
         </div>
