@@ -78,15 +78,28 @@ export default function WorkPage() {
         </div>
       </section>
       <section className='px-20 py-16'>
-        <p className='text-[12px] tracking-[0.3em] text-accent mb-6'>VMD WORK</p>
-        <div>
-          {vmdProjects.map((p, idx) => (
-            <Link href={'/work/' + p.slug} key={p.slug} className='flex items-center border-b border-border py-5 hover:bg-[#141414]'>
-              <span className='text-[11px] text-muted min-w-[40px]'>{String(idx + 1).padStart(2, '0')}</span>
-              <span className='flex-grow text-[14px] font-medium text-white'>{p.title}</span>
-              <span className='text-[11px] text-muted tracking-[0.2em] mr-6'>{p.label}</span>
-              <span className='text-[11px] text-muted min-w-[50px]'>{p.year}</span>
-              <span className='text-[12px] text-muted'>→</span>
+        <div className='flex items-baseline justify-between mb-6'>
+          <p className='text-[12px] tracking-[0.3em] text-accent'>VMD WORK</p>
+        </div>
+        <div className='grid md:grid-cols-3 border border-border'>
+          {vmdProjects.map((p) => (
+            <Link href={'/work/' + p.slug} key={p.slug} className='border-r border-b border-border last:border-r-0 hover:border-accent hover:bg-[#141414] flex flex-col'>
+              <ImageWithFallback
+                src={p.thumbnail}
+                alt={p.title}
+                width={600}
+                height={400}
+                className='w-full object-cover aspect-[4/3]'
+              />
+              <div className='p-5 flex-1 flex flex-col'>
+                <p className='text-[10px] text-muted tracking-[0.3em] uppercase mb-1'>{p.label}</p>
+                <h3 className='text-[14px] font-medium text-white mb-1'>{p.title}</h3>
+                <p className='text-[11px] text-white mb-4'>{p.description}</p>
+                <div className='mt-auto flex justify-between items-center text-[11px] text-muted'>
+                  <span>{p.year}</span>
+                  <span>→</span>
+                </div>
+              </div>
             </Link>
           ))}
         </div>
