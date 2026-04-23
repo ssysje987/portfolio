@@ -2,7 +2,17 @@ export default function Home() {
   return (
     <div style={{ background: '#0A0A0A', minHeight: '100vh', color: '#FFFFFF' }}>
 
-      <div style={{ padding: '80px 80px 64px', borderBottom: '0.5px solid #2A2A2A' }}>
+      <section style={{
+        position: 'relative',
+        minHeight: 'calc(100vh - 73px)',
+        backgroundImage: 'linear-gradient(90deg, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.82) 28%, rgba(10,10,10,0.34) 58%, rgba(10,10,10,0.08) 100%), url("/images/hero.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        borderBottom: '0.5px solid #2A2A2A',
+        padding: '72px 80px 64px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
           color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
@@ -12,30 +22,22 @@ export default function Home() {
         <h1 style={{ fontSize: '52px', fontWeight: 600, lineHeight: 1, marginBottom: '24px' }}>
           ABOUT ME
         </h1>
-        <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
-      </div>
+        <div style={{ width: '48px', height: '1px', background: '#A5B4FC', marginBottom: '72px' }} />
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 2fr',
-        padding: '80px',
-        borderBottom: '0.5px solid #2A2A2A',
-        gap: '0',
-      }}>
-        <div style={{ paddingRight: '64px' }}>
+        <div style={{
+          maxWidth: '760px',
+          marginTop: 'auto',
+        }}>
           <div style={{
             width: '100px', height: '130px',
             background: '#141414',
+            backgroundImage: 'url("/images/profile.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             border: '0.5px solid #2A2A2A',
             marginBottom: '24px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <span style={{ fontSize: '10px', letterSpacing: '0.2em', color: '#FFFFFF' }}>
-              PHOTO
-            </span>
-          </div>
+            borderRadius: '8px',
+          }} />
           <div style={{
             fontSize: '16px', fontWeight: 500,
             letterSpacing: '0.25em', marginBottom: '12px',
@@ -46,28 +48,42 @@ export default function Home() {
           <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.15em' }}>
             송세영
           </div>
-        </div>
 
-        <div>
-          <h2 style={{ fontSize: '22px', fontWeight: 500, lineHeight: 1.4, marginBottom: '24px' }}>
+          <h2 style={{
+            fontSize: '32px',
+            fontWeight: 600,
+            lineHeight: 1.2,
+            marginTop: '64px',
+            marginBottom: '32px',
+            letterSpacing: '0.02em',
+          }}>
             리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
             <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
           </h2>
-          <div style={{ width: '40px', height: '1px', background: '#A5B4FC', marginBottom: '24px' }} />
           <p style={{
-            fontSize: '14px', color: '#FFFFFF',
-            lineHeight: 1.9, fontWeight: 300, marginBottom: '24px',
+            fontSize: '14px',
+            color: '#FFFFFF',
+            lineHeight: 2,
+            fontWeight: 300,
+            marginBottom: '28px',
+            maxWidth: '720px',
           }}>
             약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
             그 과정에서 진열대·집기·동선이 곧 공간이라는 사실을 배웠고,
             상품이 놓이기 이전의 환경 — 공간 자체를 설계하는 일로 영역을 확장하려 합니다.
           </p>
-          <p style={{ fontSize: '14px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 400 }}>
+          <p style={{
+            fontSize: '14px',
+            color: '#FFFFFF',
+            lineHeight: 2,
+            fontWeight: 400,
+            maxWidth: '720px',
+          }}>
             NODE는 VMD에서 쌓은 리테일 감각과 공간 디자인이
             처음 하나의 결절점에서 만난 프로젝트입니다.
           </p>
         </div>
-      </div>
+      </section>
 
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
