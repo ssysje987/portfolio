@@ -23,8 +23,9 @@ export default function ImageWithFallback({ fallbackText, ...props }: Props) {
   return (
     <Image
       {...props}
+      alt={props.alt}
       onError={() => setHasError(true)}
-      className={(props as any).className ?? ""}
+      className={props.className ?? ""}
     />
   );
 }
