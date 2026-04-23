@@ -1,114 +1,96 @@
-const projects = [
-  {
-    id: "01",
-    title: "Project Alpha",
-    category: "Web Design & Development",
-    year: "2024",
-    description:
-      "브랜드 아이덴티티를 반영한 인터랙티브 웹 경험. Next.js와 Framer Motion을 활용해 구현했습니다.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    id: "02",
-    title: "Project Beta",
-    category: "UI/UX Design",
-    year: "2024",
-    description:
-      "사용자 중심 설계로 전환율을 40% 향상시킨 SaaS 대시보드 리디자인 프로젝트.",
-    tags: ["Figma", "React", "D3.js"],
-  },
-  {
-    id: "03",
-    title: "Project Gamma",
-    category: "Full Stack",
-    year: "2023",
-    description:
-      "실시간 협업이 가능한 문서 편집 플랫폼. WebSocket과 CRDT 알고리즘을 활용했습니다.",
-    tags: ["Next.js", "WebSocket", "PostgreSQL"],
-  },
-  {
-    id: "04",
-    title: "Project Delta",
-    category: "Motion & Interaction",
-    year: "2023",
-    description:
-      "스크롤 기반 스토리텔링을 활용한 브랜드 캠페인 마이크로사이트.",
-    tags: ["GSAP", "Three.js", "WebGL"],
-  },
-];
+'use client';
+import Link from 'next/link';
+import ImageWithFallback from '@/components/ImageWithFallback';
+import { getFeaturedProject, getSpaceProjects, getVmdProjects } from '@/lib/projects';
 
 export default function WorkPage() {
+  const featured = getFeaturedProject();
+  const spaceProjects = getSpaceProjects().slice(0, 3);
+  const vmdProjects = getVmdProjects();
   return (
-    <div className="pt-16 min-h-screen">
-      <div className="max-w-6xl mx-auto px-6 py-24">
-        {/* Header */}
-        <div className="mb-20">
-          <p className="text-xs tracking-[0.2em] text-sub uppercase mb-4">Selected Works</p>
-          <h1 className="text-4xl md:text-5xl font-semibold text-body tracking-tight">
-            Projects
-          </h1>
-        </div>
-
-        {/* Project List */}
-        <div className="flex flex-col">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group border-t border-border py-8 flex flex-col md:flex-row md:items-start gap-6 hover:bg-white/[0.01] transition-colors duration-200 cursor-pointer"
-            >
-              {/* Number */}
-              <span className="text-xs text-sub font-mono w-8 pt-1 shrink-0">
-                {project.id}
-              </span>
-
-              {/* Main Info */}
-              <div className="flex-1 flex flex-col gap-3">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                  <h2 className="text-xl font-semibold text-body group-hover:text-accent transition-colors duration-200">
-                    {project.title}
-                  </h2>
-                  <span className="text-xs text-sub">{project.year}</span>
-                </div>
-
-                <p className="text-xs tracking-wider text-sub uppercase">
-                  {project.category}
-                </p>
-
-                <p className="text-sm text-sub leading-relaxed max-w-xl">
-                  {project.description}
-                </p>
-
-                <div className="flex gap-2 flex-wrap mt-1">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs text-sub border border-border px-2 py-1 tracking-wider"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="md:pt-1 shrink-0 text-sub group-hover:text-accent transition-colors duration-200">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path
-                    d="M3 8H13M13 8L9 4M13 8L9 12"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
+    <div className='bg-background text-body'>
+      <header className='pt-20 px-20 pb-12 border-b border-border'>
+        <p className='text-[12px] tracking-[0.35em] text-accent'>WORK</p>
+        <h1 className='text-5xl font-medium text-white mt-2'>ALL PROJECTS</h1>
+      </header>
+      <section className='px-20 py-16 border-b border-border'>
+        <p className='text-[12px] tracking-[0.3em] text-accent mb-4'>FEATURED</p>
+        {featured && (
+          <div className='grid md:grid-cols-5 gap-0'>
+            <div className='md:col-span-3'>
+              <Link href={'/work/' + featured.slug}>
+                <ImageWithFallback
+                  src={featured.thumbnail}
+                  alt={featured.title}
+                  width={1280}
+                  height={800}
+                  className='w-full h-full object-cover aspect-[16/10]'
+                />
+              </Link>
             </div>
-          ))}
-
-          {/* Last border */}
-          <div className="border-t border-border" />
+            <div className='md:col-span-2 border-l border-border p-10 flex flex-col'>
+              <p className='text-[11px] text-muted tracking-[0.3em] uppercase mb-2'>
+                {featured.year} · {featured.label}
+              </p>
+              <h2 className='text-3xl font-semibold text-white mb-2'>{featured.title}</h2>
+              <p className='text-[13px] text-accent mb-4 tracking-[0.2em]'>{featured.titleKo}</p>
+              <div className='w-10 h-px bg-accent mb-4'></div>
+              <p className='text-[13px] text-sub leading-relaxed mb-4'>{featured.description}</p>
+              <div className='flex flex-wrap gap-2 mb-6'>
+                {featured.tags?.map((tag) => (
+                  <span key={tag} className='border border-border text-[12px] text-muted px-2 py-1'>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={'/work/' + featured.slug} className='text-[11px] text-accent tracking-[0.25em] uppercase'>
+                VIEW PROJECT →
+              </Link>
+            </div>
+          </div>
+        )}
+      </section>
+      <section className='px-20 py-16 border-b border-border'>
+        <div className='flex items-baseline justify-between mb-6'>
+          <p className='text-[12px] tracking-[0.3em] text-accent'>SPACE PLANNING</p>
         </div>
-      </div>
+        <div className='grid md:grid-cols-3 border border-border'>
+          {spaceProjects.map((p) => (
+            <Link href={'/work/' + p.slug} key={p.slug} className='border-r border-b border-border last:border-r-0 hover:border-accent hover:bg-[#141414] flex flex-col'>
+              <ImageWithFallback
+                src={p.thumbnail}
+                alt={p.title}
+                width={600}
+                height={400}
+                className='w-full object-cover aspect-[4/3]'
+              />
+              <div className='p-5 flex-1 flex flex-col'>
+                <p className='text-[10px] text-muted tracking-[0.3em] uppercase mb-1'>{p.label}</p>
+                <h3 className='text-[14px] font-medium text-white mb-1'>{p.title}</h3>
+                <p className='text-[11px] text-sub mb-4'>{p.description}</p>
+                <div className='mt-auto flex justify-between items-center text-[11px] text-muted'>
+                  <span>{p.year}</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className='px-20 py-16'>
+        <p className='text-[12px] tracking-[0.3em] text-accent mb-6'>VMD WORK</p>
+        <div>
+          {vmdProjects.map((p, idx) => (
+            <Link href={'/work/' + p.slug} key={p.slug} className='flex items-center border-b border-border py-5 hover:bg-[#141414]'>
+              <span className='text-[11px] text-muted min-w-[40px]'>{String(idx + 1).padStart(2, '0')}</span>
+              <span className='flex-grow text-[14px] font-medium text-white'>{p.title}</span>
+              <span className='text-[11px] text-muted tracking-[0.2em] mr-6'>{p.label}</span>
+              <span className='text-[11px] text-muted min-w-[50px]'>{p.year}</span>
+              <span className='text-[12px] text-muted'>→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
