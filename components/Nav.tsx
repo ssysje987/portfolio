@@ -26,11 +26,11 @@ export default function Nav() {
 
   const linkClass = (href: string) =>
     'text-[12px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
-    (pathname === href ? 'text-white' : 'text-[#8A8A8A] hover:text-white');
+    (pathname === href ? 'text-white' : 'text-white hover:text-white');
 
   const mobileLinkClass = (href: string) =>
     'mb-6 text-[32px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
-    (pathname === href ? 'text-white' : 'text-[#8A8A8A] hover:text-white');
+    (pathname === href ? 'text-white' : 'text-white hover:text-white');
 
   let navClasses = 'sticky top-0 z-50 border-b border-[#2A2A2A] ';
   navClasses += scrolled ? 'bg-[#0A0A0A]/95 backdrop-blur ' : 'bg-[#0A0A0A] ';
@@ -48,7 +48,7 @@ export default function Nav() {
           ))}
         </div>
         <button
-          className='md:hidden text-[#8A8A8A] hover:text-white'
+          className='md:hidden text-white hover:text-white'
           onClick={() => setMenuOpen(true)}
           aria-label='Open Menu'
         >
@@ -58,7 +58,7 @@ export default function Nav() {
       {menuOpen && (
         <div className='fixed inset-0 bg-[#0A0A0A] flex flex-col items-center justify-center z-40'>
           <button
-            className='absolute top-8 right-8 text-[#8A8A8A] hover:text-white'
+            className='absolute top-8 right-8 text-white hover:text-white'
             onClick={() => setMenuOpen(false)}
             aria-label='Close Menu'
           >

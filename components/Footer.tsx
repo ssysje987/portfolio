@@ -4,10 +4,10 @@ export default function Footer() {
       <div className="text-[14px] font-semibold tracking-[0.12em] text-white">
         SONG SEYOUNG
       </div>
-      <div className="text-[11px] text-[#4A4A4A]">
+      <div className="text-[11px] text-white">
         010.2445.3683 · ssysje987@gmail.com
       </div>
-      <div className="text-[10px] text-[#333333] tracking-[0.15em]">
+      <div className="text-[10px] text-white tracking-[0.15em]">
         © 2026 SONG SEYOUNG
       </div>
     </footer>

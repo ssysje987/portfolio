@@ -201,7 +201,7 @@ export default function ProjectImageLightbox({
             bottom: "28px",
             left: "50%",
             transform: "translateX(-50%)",
-            color: "#8A8A8A",
+            color: "#FFFFFF",
             fontSize: "12px",
             letterSpacing: "0.2em",
           }}>

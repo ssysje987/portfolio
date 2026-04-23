@@ -16,14 +16,14 @@ const config: Config = {
           2: "#1E1E1E",
         },
         cobalt: {
-          DEFAULT: "#1E2B7A",
+          DEFAULT: "#A5B4FC",
           light: "#A5B4FC",
         },
         white: "#FFFFFF",
         gray: {
-          1: "#D5D5D5",
-          2: "#8A8A8A",
-          3: "#4A4A4A",
+          1: "#FFFFFF",
+          2: "#FFFFFF",
+          3: "#FFFFFF",
         },
         border: "#2A2A2A",
       },

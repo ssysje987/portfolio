@@ -34,14 +34,14 @@ export default function ProjectPage({ params }: Props) {
       <div style={{ padding: '80px 80px 48px', borderBottom: '0.5px solid #2A2A2A' }}>
         <Link href="/work" style={{
           display: 'inline-block', fontSize: '11px',
-          letterSpacing: '0.25em', color: '#4A4A4A',
+          letterSpacing: '0.25em', color: '#FFFFFF',
           textDecoration: 'none', marginBottom: '32px',
         }}>
           ← BACK TO WORK
         </Link>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#1E2B7A', marginBottom: '16px', fontWeight: 500,
+          color: '#A5B4FC', marginBottom: '16px', fontWeight: 500,
         }}>
           {project.label}
         </div>
@@ -52,11 +52,11 @@ export default function ProjectPage({ params }: Props) {
           {project.title}
         </h1>
         {project.titleKo !== project.title && (
-          <div style={{ fontSize: '16px', color: '#8A8A8A', marginBottom: '8px' }}>
+          <div style={{ fontSize: '16px', color: '#FFFFFF', marginBottom: '8px' }}>
             {project.titleKo}
           </div>
         )}
-        <div style={{ fontSize: '12px', color: '#4A4A4A', letterSpacing: '0.2em' }}>
+        <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.2em' }}>
           {project.year}
         </div>
       </div>
@@ -80,11 +80,11 @@ export default function ProjectPage({ params }: Props) {
         <div style={{ paddingRight: project.tags && project.tags.length > 0 ? '48px' : '0' }}>
           <div style={{
             fontSize: '12px', letterSpacing: '0.35em',
-            color: '#1E2B7A', marginBottom: '24px', fontWeight: 500,
+            color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
           }}>
             PROJECT OVERVIEW
           </div>
-          <p style={{ fontSize: '16px', color: '#D5D5D5', lineHeight: 1.9, fontWeight: 300 }}>
+          <p style={{ fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 300 }}>
             {project.description}
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }: Props) {
           <div style={{ borderLeft: '0.5px solid #2A2A2A', paddingLeft: '48px' }}>
             <div style={{
               fontSize: '12px', letterSpacing: '0.35em',
-              color: '#1E2B7A', marginBottom: '24px', fontWeight: 500,
+              color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
             }}>
               DESIGN LANGUAGE
             </div>
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: Props) {
               {project.tags.map((tag) => (
                 <span key={tag} style={{
                   display: 'inline-block', fontSize: '12px',
-                  letterSpacing: '0.2em', color: '#4A4A4A',
+                  letterSpacing: '0.2em', color: '#FFFFFF',
                   border: '0.5px solid #2A2A2A', padding: '6px 12px',
                 }}>
                   {tag}
@@ -122,14 +122,14 @@ export default function ProjectPage({ params }: Props) {
       }}>
         <Link href="/work" style={{
           fontSize: '11px', letterSpacing: '0.25em',
-          color: '#4A4A4A', textDecoration: 'none',
+          color: '#FFFFFF', textDecoration: 'none',
         }}>
           ← BACK TO WORK
         </Link>
         {nextProject && (
           <Link href={`/work/${nextProject.slug}`} style={{
             fontSize: '11px', letterSpacing: '0.25em',
-            color: '#4A4A4A', textDecoration: 'none', textAlign: 'right',
+            color: '#FFFFFF', textDecoration: 'none', textAlign: 'right',
           }}>
             <div style={{ fontSize: '10px', marginBottom: '4px', letterSpacing: '0.2em' }}>
               NEXT PROJECT

@@ -10,14 +10,14 @@ export default function AboutPage() {
       <div style={{ padding: '80px 80px 64px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#1E2B7A', marginBottom: '24px', fontWeight: 500,
+          color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
         }}>
           ABOUT ME
         </div>
         <h1 style={{ fontSize: '52px', fontWeight: 600, lineHeight: 1, marginBottom: '24px' }}>
           ABOUT ME
         </h1>
-        <div style={{ width: '48px', height: '1px', background: '#1E2B7A' }} />
+        <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
       </div>
 
       <div style={{
@@ -37,7 +37,7 @@ export default function AboutPage() {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <span style={{ fontSize: '10px', letterSpacing: '0.2em', color: '#2A2A2A' }}>
+            <span style={{ fontSize: '10px', letterSpacing: '0.2em', color: '#FFFFFF' }}>
               PHOTO
             </span>
           </div>
@@ -47,8 +47,8 @@ export default function AboutPage() {
           }}>
             SONG SEYOUNG
           </div>
-          <div style={{ width: '30px', height: '1px', background: '#1E2B7A', marginBottom: '12px' }} />
-          <div style={{ fontSize: '12px', color: '#8A8A8A', letterSpacing: '0.15em' }}>
+          <div style={{ width: '30px', height: '1px', background: '#A5B4FC', marginBottom: '12px' }} />
+          <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.15em' }}>
             송세영
           </div>
         </div>
@@ -58,9 +58,9 @@ export default function AboutPage() {
             리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
             <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
           </h2>
-          <div style={{ width: '40px', height: '1px', background: '#1E2B7A', marginBottom: '24px' }} />
+          <div style={{ width: '40px', height: '1px', background: '#A5B4FC', marginBottom: '24px' }} />
           <p style={{
-            fontSize: '14px', color: '#8A8A8A',
+            fontSize: '14px', color: '#FFFFFF',
             lineHeight: 1.9, fontWeight: 300, marginBottom: '24px',
           }}>
             약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#1E2B7A', marginBottom: '48px', fontWeight: 500,
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
         }}>
           CAREER
         </div>
@@ -108,10 +108,10 @@ export default function AboutPage() {
               <div style={{ fontSize: '14px', fontWeight: 500, color: '#FFFFFF' }}>
                 {item.company}
               </div>
-              <div style={{ fontSize: '13px', color: '#8A8A8A', fontWeight: 300 }}>
+              <div style={{ fontSize: '13px', color: '#FFFFFF', fontWeight: 300 }}>
                 {item.role}
               </div>
-              <div style={{ fontSize: '12px', color: '#4A4A4A', letterSpacing: '0.05em', textAlign: 'right' }}>
+              <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.05em', textAlign: 'right' }}>
                 {item.period}
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#1E2B7A', marginBottom: '48px', fontWeight: 500,
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
         }}>
           SKILL
         </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
           {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator', 'InDesign'].map((skill) => (
             <span key={skill} style={{
               fontSize: '12px', letterSpacing: '0.2em',
-              color: '#8A8A8A', border: '0.5px solid #2A2A2A',
+              color: '#FFFFFF', border: '0.5px solid #2A2A2A',
               padding: '8px 16px',
             }}>
               {skill}
@@ -142,7 +142,7 @@ export default function AboutPage() {
       <div style={{ padding: '80px' }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
-          color: '#1E2B7A', marginBottom: '48px', fontWeight: 500,
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
         }}>
           CONTACT
         </div>
