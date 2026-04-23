@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -53,7 +52,7 @@ export default function Nav() {
           onClick={() => setMenuOpen(true)}
           aria-label='Open Menu'
         >
-          <Menu size={24} />
+          <svg width='20' height='20' viewBox='0 0 20 20' fill='none' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round'><line x1='3' y1='6' x2='17' y2='6'/><line x1='3' y1='10' x2='17' y2='10'/><line x1='3' y1='14' x2='17' y2='14'/></svg>
         </button>
       </div>
       {menuOpen && (
@@ -63,7 +62,7 @@ export default function Nav() {
             onClick={() => setMenuOpen(false)}
             aria-label='Close Menu'
           >
-            <X size={32} />
+            <svg width='20' height='20' viewBox='0 0 20 20' fill='none' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round'><line x1='4' y1='4' x2='16' y2='16'/><line x1='16' y1='4' x2='4' y2='16'/></svg>
           </button>
           {links.map(({ label, href }) => (
             <Link
