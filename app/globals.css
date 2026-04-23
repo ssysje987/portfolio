@@ -158,6 +158,39 @@ body {
   }
 }
 
+/* ── Career ─────────────────────────────────────────────────── */
+.career-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.8fr 3.4fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.career-period {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .career-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 28px 0;
+  }
+
+  .career-period {
+    text-align: left;
+    white-space: normal;
+  }
+}
+
 /* ── Project Detail ─────────────────────────────────────────── */
 .project-detail-intro {
   padding: 96px 80px 56px;

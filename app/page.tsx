@@ -118,32 +118,33 @@ export default function Home() {
             {
               company: '(주)한성에프아이',
               role: '대리 · VM·인테리어 담당',
+              summary: '브랜드 공간 가이드 기획 · 오픈권 레이아웃 검토 · 협력업체 조율 및 현장 구현',
               period: '2022.05 — 2026.01 · 3년 8개월',
             },
             {
               company: '(주)마미버드',
               role: '주임 · VM·인테리어 담당',
+              summary: '체험형 브랜드 공간 기획 · 오픈권 레이아웃 검토 · 매뉴얼 기반 촬영 운영',
               period: '2017.09 — 2021.01 · 3년 4개월',
             },
             {
               company: '(주)지오다노',
               role: '인턴 · VMD',
+              summary: '매장 공간 연출 지원 · 현장 라운딩 실무 · 리테일 공간 운영 기반 습득',
               period: '2016.12 — 2017.03 · 4개월',
             },
           ].map((item, i) => (
-            <div key={i} style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              padding: '24px 0',
-              borderBottom: '0.5px solid #2A2A2A',
-            }}>
-              <div style={{ fontSize: '14px', fontWeight: 500, color: '#FFFFFF' }}>
+            <div key={i} className="career-row">
+              <div style={{ fontSize: '14px', fontWeight: 600, color: '#FFFFFF' }}>
                 {item.company}
               </div>
-              <div style={{ fontSize: '13px', color: '#FFFFFF', fontWeight: 300 }}>
+              <div style={{ fontSize: '13px', color: '#FFFFFF', fontWeight: 500 }}>
                 {item.role}
               </div>
-              <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.05em', textAlign: 'right' }}>
+              <div style={{ fontSize: '13px', color: '#FFFFFF', fontWeight: 500 }}>
+                {item.summary}
+              </div>
+              <div className="career-period">
                 {item.period}
               </div>
             </div>
