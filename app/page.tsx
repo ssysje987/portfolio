@@ -1,180 +1,186 @@
-import Link from "next/link";
-import ImageWithFallback from "@/components/ImageWithFallback";
-import { getFeaturedProject, getSpaceProjects } from "@/lib/projects";
-
 export default function Home() {
-  const featured = getFeaturedProject();
-  const spaceProjects = getSpaceProjects().slice(0, 3);
-
   return (
-    <>
-      <section className="relative min-h-screen bg-[#0A0A0A] flex flex-col">
-        {featured && (
-          <div className="hidden md:block absolute right-0 top-0 bottom-0 w-1/2">
-            <ImageWithFallback
-              src={featured.thumbnail}
-              alt={featured.title}
-              width={960}
-              height={1080}
-            />
+    <div style={{ background: '#0A0A0A', minHeight: '100vh', color: '#FFFFFF' }}>
+
+      <div style={{ padding: '80px 80px 64px', borderBottom: '0.5px solid #2A2A2A' }}>
+        <div style={{
+          fontSize: '12px', letterSpacing: '0.35em',
+          color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
+        }}>
+          ABOUT ME
+        </div>
+        <h1 style={{ fontSize: '52px', fontWeight: 600, lineHeight: 1, marginBottom: '24px' }}>
+          ABOUT ME
+        </h1>
+        <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
+      </div>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 2fr',
+        padding: '80px',
+        borderBottom: '0.5px solid #2A2A2A',
+        gap: '0',
+      }}>
+        <div style={{ paddingRight: '64px' }}>
+          <div style={{
+            width: '100px', height: '130px',
+            background: '#141414',
+            border: '0.5px solid #2A2A2A',
+            marginBottom: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <span style={{ fontSize: '10px', letterSpacing: '0.2em', color: '#FFFFFF' }}>
+              PHOTO
+            </span>
           </div>
-        )}
-        <div className="relative z-10 flex-grow flex flex-col justify-center px-6 md:px-20">
-          <div className="text-[12px] tracking-[0.35em] text-[#A5B4FC] mb-4">
-            COMMERCIAL SPACE DESIGNER
+          <div style={{
+            fontSize: '16px', fontWeight: 500,
+            letterSpacing: '0.25em', marginBottom: '12px',
+          }}>
+            SONG SEYOUNG
           </div>
-          <h1 className="text-5xl md:text-7xl font-semibold leading-[0.95] text-white whitespace-pre-line">
-            WHERE{"\n"}SUBCULTURES{"\n"}FLOW INTO{"\n"}
-            <span className="text-[#A5B4FC]">ONE NODE.</span>
-          </h1>
-          <p className="mt-6 text-[13px] text-white tracking-[0.1em]">
-            리테일 경험을 바탕으로 브랜드 공간을 설계합니다.
+          <div style={{ width: '30px', height: '1px', background: '#A5B4FC', marginBottom: '12px' }} />
+          <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.15em' }}>
+            송세영
+          </div>
+        </div>
+
+        <div>
+          <h2 style={{ fontSize: '22px', fontWeight: 500, lineHeight: 1.4, marginBottom: '24px' }}>
+            리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
+            <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
+          </h2>
+          <div style={{ width: '40px', height: '1px', background: '#A5B4FC', marginBottom: '24px' }} />
+          <p style={{
+            fontSize: '14px', color: '#FFFFFF',
+            lineHeight: 1.9, fontWeight: 300, marginBottom: '24px',
+          }}>
+            약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
+            그 과정에서 진열대·집기·동선이 곧 공간이라는 사실을 배웠고,
+            상품이 놓이기 이전의 환경 — 공간 자체를 설계하는 일로 영역을 확장하려 합니다.
           </p>
-          <div className="absolute bottom-8 left-6 md:left-20 right-6 md:right-20 flex justify-between text-[12px] text-white">
-            <span>SCROLL ↓</span>
-            <span>ssysje987@gmail.com · 010.2445.3683</span>
-          </div>
+          <p style={{ fontSize: '14px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 400 }}>
+            NODE는 VMD에서 쌓은 리테일 감각과 공간 디자인이
+            처음 하나의 결절점에서 만난 프로젝트입니다.
+          </p>
         </div>
-      </section>
+      </div>
 
-      {featured && (
-        <section className="bg-[#0A0A0A] py-16 px-6 md:px-20">
-          <div className="text-[12px] tracking-[0.35em] text-[#A5B4FC] mb-6">
-            01 · FEATURED PROJECT
-          </div>
-          <div className="grid md:grid-cols-5 gap-8">
-            <div className="md:col-span-3">
-              <ImageWithFallback
-                src={featured.thumbnail}
-                alt={featured.title}
-                width={960}
-                height={720}
-              />
-            </div>
-            <div className="md:col-span-2 border-l border-[#2A2A2A] pl-8 flex flex-col justify-between">
-              <div>
-                <div className="text-[11px] tracking-[0.3em] text-white uppercase mb-1">
-                  {featured.label}
-                </div>
-                <h2 className="text-[36px] font-semibold text-white mb-1">
-                  {featured.title}
-                </h2>
-                <div className="text-[13px] tracking-[0.2em] text-[#A5B4FC] mb-2">
-                  {featured.titleKo}
-                </div>
-                <div className="w-10 h-px bg-[#A5B4FC] mb-4"></div>
-                <p className="text-[13px] text-white leading-[1.75] mb-4">
-                  {featured.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {featured.tags?.map((tag) => (
-                    <span
-                      key={tag}
-                      className="border border-[#2A2A2A] text-white text-[10px] px-[10px] py-[4px] tracking-[0.25em]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <Link
-                href={`/work/${featured.slug}`}
-                className="text-[11px] tracking-[0.25em] text-[#A5B4FC]"
-              >
-                VIEW PROJECT →
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="bg-[#0A0A0A] py-16 px-6 md:px-20">
-        <div className="flex justify-between items-center mb-6">
-          <div className="text-[12px] tracking-[0.35em] text-[#A5B4FC]">
-            02 · SPACE PLANNING
-          </div>
-          <Link href="/work" className="text-[12px] tracking-[0.25em] text-[#A5B4FC]">
-            VIEW ALL →
-          </Link>
+      <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
+        <div style={{
+          fontSize: '12px', letterSpacing: '0.35em',
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+        }}>
+          CAREER
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {spaceProjects.map((project) => (
-            <Link
-              href={`/work/${project.slug}`}
-              key={project.slug}
-              className="border border-transparent hover:border-[#A5B4FC] transition-colors duration-200"
-            >
-              <ImageWithFallback
-                src={project.thumbnail}
-                alt={project.title}
-                width={400}
-                height={300}
-              />
-              <div className="p-5">
-                <div className="text-[10px] tracking-[0.3em] text-white uppercase mb-1">
-                  {project.label}
-                </div>
-                <div className="text-[14px] font-medium text-white mb-1">
-                  {project.title}
-                </div>
-                <div className="text-[11px] text-white mb-4">
-                  {project.description}
-                </div>
-                <div className="flex justify-end items-center text-[11px]">
-                  <span>→</span>
-                </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+          {[
+            {
+              company: '(주)한성에프아이',
+              role: '대리 · VM·인테리어 담당',
+              period: '2022.05 — 2026.01 · 3년 8개월',
+            },
+            {
+              company: '(주)마미버드',
+              role: '주임 · VM·인테리어 담당',
+              period: '2017.09 — 2021.01 · 3년 4개월',
+            },
+            {
+              company: '(주)지오다노',
+              role: '인턴 · VMD',
+              period: '2016.12 — 2017.03 · 4개월',
+            },
+          ].map((item, i) => (
+            <div key={i} style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr 1fr',
+              padding: '24px 0',
+              borderBottom: '0.5px solid #2A2A2A',
+            }}>
+              <div style={{ fontSize: '14px', fontWeight: 500, color: '#FFFFFF' }}>
+                {item.company}
               </div>
-            </Link>
+              <div style={{ fontSize: '13px', color: '#FFFFFF', fontWeight: 300 }}>
+                {item.role}
+              </div>
+              <div style={{ fontSize: '12px', color: '#FFFFFF', letterSpacing: '0.05em', textAlign: 'right' }}>
+                {item.period}
+              </div>
+            </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className="bg-[#0A0A0A] py-16 px-6 md:px-20 grid md:grid-cols-2 gap-8">
-        <div>
-          <div className="text-[12px] tracking-[0.35em] text-[#A5B4FC] mb-4">ABOUT</div>
-          <h3 className="text-[22px] font-medium text-white mb-2">
-            리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
-            <span className="text-[#A5B4FC]">공간 디자이너</span>
-          </h3>
-          <div className="w-10 h-px bg-[#A5B4FC] mb-4"></div>
-          <p className="text-[12px] text-white leading-[1.8]">
-            약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
-            <br />
-            <span className="text-white">
-              NODE는 VMD 감각과 공간 디자인이 처음 만난 결절점입니다.
+      <div style={{ padding: '80px', borderBottom: '0.5px solid #2A2A2A' }}>
+        <div style={{
+          fontSize: '12px', letterSpacing: '0.35em',
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+        }}>
+          SKILL
+        </div>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator', 'InDesign'].map((skill) => (
+            <span key={skill} style={{
+              fontSize: '12px', letterSpacing: '0.2em',
+              color: '#FFFFFF', border: '0.5px solid #2A2A2A',
+              padding: '8px 16px',
+            }}>
+              {skill}
             </span>
-          </p>
+          ))}
         </div>
-        <div className="border-l border-[#2A2A2A] pl-12 flex flex-col gap-8">
+      </div>
+
+      <div style={{ padding: '80px' }}>
+        <div style={{
+          fontSize: '12px', letterSpacing: '0.35em',
+          color: '#A5B4FC', marginBottom: '48px', fontWeight: 500,
+        }}>
+          CONTACT
+        </div>
+        <p style={{
+          fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9,
+          fontWeight: 300, marginBottom: '64px', maxWidth: '480px',
+        }}>
+          공간 디자인 · VMD · 브랜드 공간 기획 관련 문의는
+          아래 연락처로 연락해주세요.
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <div>
-            <div className="flex items-end gap-2">
-              <span className="text-[28px] font-medium text-white">7</span>
-              <span className="text-[14px] text-[#A5B4FC]">YRS</span>
+            <div style={{
+              fontSize: '11px', letterSpacing: '0.3em',
+              color: '#FFFFFF', marginBottom: '12px', fontWeight: 500,
+            }}>
+              PHONE
             </div>
-            <div className="text-[11px] text-white tracking-[0.2em]">
-              COMMERCIAL VMD EXPERIENCE
-            </div>
+            <a href="tel:01024453683" style={{
+              fontSize: '28px', color: '#FFFFFF',
+              textDecoration: 'none', letterSpacing: '0.05em', fontWeight: 300,
+            }}>
+              010.2445.3683
+            </a>
           </div>
+          <div style={{ width: '100%', height: '0.5px', background: '#2A2A2A' }} />
           <div>
-            <div className="flex items-end gap-2">
-              <span className="text-[28px] font-medium text-white">12+</span>
-              <span className="text-[14px] text-[#A5B4FC]">PJT</span>
+            <div style={{
+              fontSize: '11px', letterSpacing: '0.3em',
+              color: '#FFFFFF', marginBottom: '12px', fontWeight: 500,
+            }}>
+              EMAIL
             </div>
-            <div className="text-[11px] text-white tracking-[0.2em]">
-              BRAND SPACE · DISPLAY PROJECTS
-            </div>
-          </div>
-          <div>
-            <div className="flex items-end gap-2">
-              <span className="text-[28px] font-medium text-white">3</span>
-              <span className="text-[14px] text-[#A5B4FC]">BRD</span>
-            </div>
-            <div className="text-[11px] text-white tracking-[0.2em]">
-              MAJOR RETAIL BRAND EXPERIENCE
-            </div>
+            <a href="mailto:ssysje987@gmail.com" style={{
+              fontSize: '28px', color: '#FFFFFF',
+              textDecoration: 'none', letterSpacing: '0.05em', fontWeight: 300,
+            }}>
+              ssysje987@gmail.com
+            </a>
           </div>
         </div>
-      </section>
-    </>
-  );
+      </div>
+
+    </div>
+  )
 }

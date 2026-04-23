@@ -18,10 +18,8 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { label: 'HOME', href: '/' },
+    { label: 'ABOUT ME', href: '/' },
     { label: 'WORK', href: '/work' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'CONTACT', href: '/contact' },
   ];
 
   const linkClass = (href: string) =>
@@ -39,7 +37,7 @@ export default function Nav() {
   return (
     <nav className={navClasses}>
       <div className='max-w-7xl mx-auto flex items-center justify-between'>
-        <Link href='/' className='text-white text-[16px] font-medium tracking-[0.12em]'>SONG SEYOUNG</Link>
+        <Link href='/' className='text-white text-[16px] font-medium tracking-[0.12em]'>HOME</Link>
         <div className='hidden md:flex items-center gap-10'>
           {links.map(({ label, href }) => (
             <Link key={href} href={href} className={linkClass(href)}>
