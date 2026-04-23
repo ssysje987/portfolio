@@ -85,22 +85,21 @@ export default function Home() {
             color: '#FFFFFF',
             lineHeight: 2,
             fontWeight: 300,
-            marginBottom: '28px',
+            marginBottom: '18px',
             maxWidth: '720px',
           }}>
-            약 7년간 상업 VMD로 근무하며 SI 인테리어와 VM을 담당했습니다.
-            그 과정에서 진열대·집기·동선이 곧 공간이라는 사실을 배웠고,
-            상품이 놓이기 이전의 환경 — 공간 자체를 설계하는 일로 영역을 확장하려 합니다.
+            약 7년간 상업 VMD로 일하며 SI 인테리어와 VM을 함께 담당했습니다.<br />
+            브랜드의 가치와 전략은 공간의 구조와 동선, 집기와 재료 등 공간 디자인을 통해 고객이 체감하는 경험으로 완성된다고 믿습니다.<br />
+            이제는 상품을 담는 환경을 넘어 공간 자체를 설계하는 디자이너로 확장하고자 합니다.
           </p>
           <p style={{
             fontSize: '14px',
             color: '#FFFFFF',
             lineHeight: 2,
-            fontWeight: 400,
+            fontWeight: 500,
             maxWidth: '720px',
           }}>
-            NODE는 VMD에서 쌓은 리테일 감각과 공간 디자인이
-            처음 하나의 결절점에서 만난 프로젝트입니다.
+            VMD와 인테리어가 만나는 지점, 그 연결점으로서의 공간. 저에게 그것이 NODE입니다.
           </p>
         </div>
         </div>
