@@ -56,7 +56,7 @@ export const projects: Project[] = [
     titleKo: 'AT.P.CO',
     year: 2023,
     category: 'space',
-    label: 'VMD · SI INTERIOR',
+    label: 'SI INTERIOR',
     description: 'VP 연출 · 쇼룸 기획',
     thumbnail: '/images/atpco-main.jpg',
     images: [
@@ -91,8 +91,8 @@ export const projects: Project[] = [
     title: 'SEASE',
     titleKo: 'SEASE',
     year: 2023,
-    category: 'vmd',
-    label: 'VMD · DISPLAY',
+    category: 'space',
+    label: 'SI INTERIOR',
     description: '쇼룸 연출',
     thumbnail: '/images/sease-main.jpg',
     images: [
@@ -109,8 +109,8 @@ export const projects: Project[] = [
     title: '올포유 LADY',
     titleKo: '올포유 LADY',
     year: 2023,
-    category: 'vmd',
-    label: 'VMD',
+    category: 'space',
+    label: 'SI INTERIOR',
     description: '시즌 VMD 기획 · 연출',
     thumbnail: '/images/allforyou-lady-main.jpg',
     images: [
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     titleKo: 'AT.P.CO 팝업',
     year: 2023,
     category: 'vmd',
-    label: 'VMD · POP-UP',
+    label: 'POP-UP',
     description: '팝업 스토어 기획 · 연출',
     thumbnail: '/images/popup-main.jpg',
     images: [
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     titleKo: 'AT.P.CO VP연출',
     year: 2022,
     category: 'vmd',
-    label: 'VMD · VP',
+    label: 'VP',
     description: 'VP 공간 연출',
     thumbnail: '/images/atpco-vp-main.jpg',
     images: [
@@ -159,7 +159,7 @@ export const projects: Project[] = [
     titleKo: 'THE OPEN 쇼룸 연출',
     year: 2022,
     category: 'vmd',
-    label: 'VMD · SHOWROOM',
+    label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/the-open-showroom-main.jpg',
     images: [
@@ -181,7 +181,7 @@ export const projects: Project[] = [
     titleKo: '올포유 쇼룸 연출',
     year: 2022,
     category: 'vmd',
-    label: 'VMD · SHOWROOM',
+    label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/allforyou-showroom-main.jpg',
     images: [
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     titleKo: '오닐 쇼룸 연출',
     year: 2022,
     category: 'vmd',
-    label: 'VMD · SHOWROOM',
+    label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/oneill-showroom-main.jpg',
     images: [
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     titleKo: '마르지엘라 윈도우',
     year: 2021,
     category: 'vmd',
-    label: 'VMD · WINDOW',
+    label: 'WINDOW',
     description: '윈도우 디스플레이',
     thumbnail: '/images/margiela-main.jpg',
     images: [
@@ -236,7 +236,7 @@ export const projects: Project[] = [
     titleKo: 'COS 윈도우',
     year: 2020,
     category: 'vmd',
-    label: 'VMD · WINDOW',
+    label: 'WINDOW',
     description: '윈도우 디스플레이',
     thumbnail: '/images/cos-main.jpg',
     images: [

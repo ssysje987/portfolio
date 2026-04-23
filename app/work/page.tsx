@@ -5,7 +5,7 @@ import { getFeaturedProject, getSpaceProjects, getVmdProjects } from '@/lib/proj
 
 export default function WorkPage() {
   const featured = getFeaturedProject();
-  const spaceProjects = getSpaceProjects().slice(0, 3);
+  const spaceProjects = getSpaceProjects();
   const vmdProjects = getVmdProjects();
   return (
     <div className='bg-background text-body'>
