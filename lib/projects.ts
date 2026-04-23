@@ -36,8 +36,8 @@ export const projects: Project[] = [
     titleKo: '도예가의 하우스',
     year: 2023,
     category: 'space',
-    label: 'SPACE PLANNING',
-    description: '공간 기획 · 연출',
+    label: 'Interior Design',
+    description: '개인 프로젝트',
     thumbnail: '/images/ceramist-main.png',
     images: [
       '/images/ceramist-01.jpg',
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     year: 2023,
     category: 'space',
     label: 'SI INTERIOR',
-    description: 'VP 연출 · 쇼룸 기획',
+    description: '공간 디자인 기획',
     thumbnail: '/images/atpco-main.jpg',
     images: [
       '/images/atpco-01.jpg',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     year: 2023,
     category: 'space',
     label: 'SI INTERIOR',
-    description: '쇼룸 연출',
+    description: '공간 디자인 기획',
     thumbnail: '/images/sease-main.jpg',
     images: [
       '/images/sease-01.jpg',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     year: 2023,
     category: 'space',
     label: 'SI INTERIOR',
-    description: '시즌 VMD 기획 · 연출',
+    description: '공간 디자인 기획',
     thumbnail: '/images/allforyou-lady-main.jpg',
     images: [
       '/images/allforyou-lady-01.jpg',
