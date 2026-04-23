@@ -1,15 +1,15 @@
 export type Project = {
-  slug: string;
-  title: string;
-  titleKo: string;
-  year: number;
-  category: 'featured' | 'space' | 'vmd';
-  label: string;
-  description: string;
-  thumbnail: string;
-  images: string[];
-  tags?: string[];
-};
+  slug: string
+  title: string
+  titleKo: string
+  year: number
+  category: 'featured' | 'space' | 'vmd'
+  label: string
+  description: string
+  thumbnail: string
+  images: string[]
+  tags?: string[]
+}
 
 export const projects: Project[] = [
   {
@@ -25,6 +25,8 @@ export const projects: Project[] = [
       '/images/node-01.jpg',
       '/images/node-02.jpg',
       '/images/node-03.jpg',
+      '/images/node-04.jpg',
+      '/images/node-05.jpg',
     ],
     tags: ['INDUSTRIAL', 'Y2K REVIVAL', 'TACTILE OASIS'],
   },
@@ -37,7 +39,16 @@ export const projects: Project[] = [
     label: 'SPACE PLANNING',
     description: '공간 기획 · 연출',
     thumbnail: '/images/ceramist-main.jpg',
-    images: [],
+    images: [
+      '/images/ceramist-01.jpg',
+      '/images/ceramist-02.jpg',
+      '/images/ceramist-03.jpg',
+      '/images/ceramist-04.jpg',
+      '/images/ceramist-05.jpg',
+      '/images/ceramist-06.jpg',
+      '/images/ceramist-07.jpg',
+      '/images/ceramist-08.jpg',
+    ],
   },
   {
     slug: 'atpco',
@@ -48,7 +59,16 @@ export const projects: Project[] = [
     label: 'VMD · SI INTERIOR',
     description: 'VP 연출 · 쇼룸 기획',
     thumbnail: '/images/atpco-main.jpg',
-    images: [],
+    images: [
+      '/images/atpco-01.jpg',
+      '/images/atpco-02.jpg',
+      '/images/atpco-03.jpg',
+      '/images/atpco-04.jpg',
+      '/images/atpco-05.jpg',
+      '/images/atpco-06.jpg',
+      '/images/atpco-07.jpg',
+      '/images/atpco-08.jpg',
+    ],
   },
   {
     slug: 'the-open-fixture',
@@ -59,7 +79,12 @@ export const projects: Project[] = [
     label: 'FIXTURE DESIGN',
     description: '집기 설계 · 제작',
     thumbnail: '/images/the-open-fixture-main.jpg',
-    images: [],
+    images: [
+      '/images/the-open-fixture-01.jpg',
+      '/images/the-open-fixture-02.jpg',
+      '/images/the-open-fixture-03.jpg',
+      '/images/the-open-fixture-04.jpg',
+    ],
   },
   {
     slug: 'sease',
@@ -70,7 +95,14 @@ export const projects: Project[] = [
     label: 'VMD · DISPLAY',
     description: '쇼룸 연출',
     thumbnail: '/images/sease-main.jpg',
-    images: [],
+    images: [
+      '/images/sease-01.jpg',
+      '/images/sease-02.jpg',
+      '/images/sease-03.jpg',
+      '/images/sease-04.jpg',
+      '/images/sease-05.jpg',
+      '/images/sease-06.jpg',
+    ],
   },
   {
     slug: 'allforyou-lady',
@@ -79,20 +111,31 @@ export const projects: Project[] = [
     year: 2023,
     category: 'vmd',
     label: 'VMD',
-    description: '시즌 VMD 기획·연출',
+    description: '시즌 VMD 기획 · 연출',
     thumbnail: '/images/allforyou-lady-main.jpg',
-    images: [],
+    images: [
+      '/images/allforyou-lady-01.jpg',
+      '/images/allforyou-lady-02.jpg',
+      '/images/allforyou-lady-03.jpg',
+      '/images/allforyou-lady-04.jpg',
+      '/images/allforyou-lady-05.jpg',
+      '/images/allforyou-lady-06.jpg',
+    ],
   },
   {
     slug: 'pop-up',
-    title: 'POP UP',
-    titleKo: 'POP UP',
+    title: 'AT.P.CO 팝업',
+    titleKo: 'AT.P.CO 팝업',
     year: 2023,
     category: 'vmd',
     label: 'VMD · POP-UP',
-    description: '팝업 스토어 기획·연출',
+    description: '팝업 스토어 기획 · 연출',
     thumbnail: '/images/popup-main.jpg',
-    images: [],
+    images: [
+      '/images/popup-01.jpg',
+      '/images/popup-02.jpg',
+      '/images/popup-03.jpg',
+    ],
   },
   {
     slug: 'atpco-vp',
@@ -103,7 +146,12 @@ export const projects: Project[] = [
     label: 'VMD · VP',
     description: 'VP 공간 연출',
     thumbnail: '/images/atpco-vp-main.jpg',
-    images: [],
+    images: [
+      '/images/atpco-vp-01.jpg',
+      '/images/atpco-vp-02.jpg',
+      '/images/atpco-vp-03.jpg',
+      '/images/atpco-vp-04.jpg',
+    ],
   },
   {
     slug: 'the-open-showroom',
@@ -114,7 +162,18 @@ export const projects: Project[] = [
     label: 'VMD · SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/the-open-showroom-main.jpg',
-    images: [],
+    images: [
+      '/images/the-open-showroom-01.jpg',
+      '/images/the-open-showroom-02.jpg',
+      '/images/the-open-showroom-03.jpg',
+      '/images/the-open-showroom-04.jpg',
+      '/images/the-open-showroom-05.jpg',
+      '/images/the-open-showroom-06.jpg',
+      '/images/the-open-showroom-07.jpg',
+      '/images/the-open-showroom-08.jpg',
+      '/images/the-open-showroom-09.jpg',
+
+    ],
   },
   {
     slug: 'allforyou-showroom',
@@ -125,7 +184,18 @@ export const projects: Project[] = [
     label: 'VMD · SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/allforyou-showroom-main.jpg',
-    images: [],
+    images: [
+      '/images/allforyou-showroom-01.jpg',
+      '/images/allforyou-showroom-02.jpg',
+      '/images/allforyou-showroom-03.jpg',
+      '/images/allforyou-showroom-04.jpg',
+      '/images/allforyou-showroom-05.jpg',
+      '/images/allforyou-showroom-06.jpg',
+      '/images/allforyou-showroom-07.jpg',
+      '/images/allforyou-showroom-08.jpg',
+      '/images/allforyou-showroom-09.jpg',
+      '/images/allforyou-showroom-10.jpg',
+    ],
   },
   {
     slug: 'oneill-showroom',
@@ -136,7 +206,12 @@ export const projects: Project[] = [
     label: 'VMD · SHOWROOM',
     description: '쇼룸 공간 연출',
     thumbnail: '/images/oneill-showroom-main.jpg',
-    images: [],
+    images: [
+      '/images/oneill-showroom-01.jpg',
+      '/images/oneill-showroom-02.jpg',
+      '/images/oneill-showroom-03.jpg',
+      '/images/oneill-showroom-04.jpg',
+    ],
   },
   {
     slug: 'margiela-window',
@@ -147,7 +222,13 @@ export const projects: Project[] = [
     label: 'VMD · WINDOW',
     description: '윈도우 디스플레이',
     thumbnail: '/images/margiela-main.jpg',
-    images: [],
+    images: [
+      '/images/margiela-01.jpg',
+      '/images/margiela-02.jpg',
+      '/images/margiela-03.jpg',
+      '/images/margiela-04.jpg',
+      '/images/margiela-05.jpg',
+    ],
   },
   {
     slug: 'cos-window',
@@ -158,22 +239,25 @@ export const projects: Project[] = [
     label: 'VMD · WINDOW',
     description: '윈도우 디스플레이',
     thumbnail: '/images/cos-main.jpg',
-    images: [],
+    images: [
+      '/images/cos-01.jpg',
+      '/images/cos-02.jpg',
+    ],
   },
-];
+]
 
-export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+export function getProjectBySlug(slug: string) {
+  return projects.find((p) => p.slug === slug) ?? null
 }
 
-export function getFeaturedProject(): Project | undefined {
-  return projects.find((p) => p.category === 'featured');
+export function getFeaturedProject() {
+  return projects.find((p) => p.category === 'featured') ?? null
 }
 
-export function getSpaceProjects(): Project[] {
-  return projects.filter((p) => p.category === 'space');
+export function getSpaceProjects() {
+  return projects.filter((p) => p.category === 'space')
 }
 
-export function getVmdProjects(): Project[] {
-  return projects.filter((p) => p.category === 'vmd');
+export function getVmdProjects() {
+  return projects.filter((p) => p.category === 'vmd')
 }
