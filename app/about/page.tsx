@@ -127,7 +127,7 @@ export default function AboutPage() {
           SKILL
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator', 'InDesign'].map((skill) => (
+          {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator'].map((skill) => (
             <span key={skill} style={{
               fontSize: '12px', letterSpacing: '0.2em',
               color: '#FFFFFF', border: '0.5px solid #2A2A2A',

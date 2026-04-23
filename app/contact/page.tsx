@@ -18,13 +18,6 @@ export default function ContactPage() {
         <div style={{ width: '48px', height: '1px', background: '#A5B4FC' }} />
       </div>
       <div style={{ padding: '80px' }}>
-        <p style={{
-          fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9,
-          fontWeight: 300, marginBottom: '64px', maxWidth: '480px',
-        }}>
-          공간 디자인 · VMD · 브랜드 공간 기획 관련 문의는
-          아래 연락처로 연락해주세요.
-        </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <div>
             <div style={{

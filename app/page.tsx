@@ -122,7 +122,7 @@ export default function Home() {
           SKILL
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator', 'InDesign'].map((skill) => (
+          {['AutoCAD', 'SketchUp', 'Enscape', 'Photoshop', 'Illustrator'].map((skill) => (
             <span key={skill} style={{
               fontSize: '12px', letterSpacing: '0.2em',
               color: '#FFFFFF', border: '0.5px solid #2A2A2A',
@@ -141,13 +141,6 @@ export default function Home() {
         }}>
           CONTACT
         </div>
-        <p style={{
-          fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9,
-          fontWeight: 300, marginBottom: '64px', maxWidth: '480px',
-        }}>
-          공간 디자인 · VMD · 브랜드 공간 기획 관련 문의는
-          아래 연락처로 연락해주세요.
-        </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
           <div>
             <div style={{
