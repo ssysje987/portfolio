@@ -5,14 +5,34 @@ export default function Home() {
       <section style={{
         position: 'relative',
         minHeight: 'calc(100vh - 73px)',
-        backgroundImage: 'linear-gradient(90deg, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.82) 28%, rgba(10,10,10,0.34) 58%, rgba(10,10,10,0.08) 100%), url("/images/hero.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: '62% center',
+        overflow: 'hidden',
         borderBottom: '0.5px solid #2A2A2A',
         padding: '72px 80px 64px',
         display: 'flex',
         flexDirection: 'column',
       }}>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url("/images/hero.jpg")',
+          backgroundSize: '112% auto',
+          backgroundPosition: '78% center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 0,
+        }} />
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(90deg, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.86) 30%, rgba(10,10,10,0.42) 58%, rgba(10,10,10,0.08) 100%)',
+          zIndex: 1,
+        }} />
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: 'calc(100vh - 209px)',
+        }}>
         <div style={{
           fontSize: '12px', letterSpacing: '0.35em',
           color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
@@ -82,6 +102,7 @@ export default function Home() {
             NODE는 VMD에서 쌓은 리테일 감각과 공간 디자인이
             처음 하나의 결절점에서 만난 프로젝트입니다.
           </p>
+        </div>
         </div>
       </section>
 
