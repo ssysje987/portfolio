@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getProjectBySlug, projects } from '@/lib/projects'
 import ImageWithFallback from '@/components/ImageWithFallback'
+import ProjectImageLightbox from '@/components/project/ProjectImageLightbox'
 
 interface Props {
   params: { slug: string }
@@ -110,31 +111,7 @@ export default function ProjectPage({ params }: Props) {
         )}
       </div>
 
-      {project.images && project.images.length > 0 && (
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '2px',
-          background: '#0A0A0A',
-          padding: '2px',
-        }}>
-          {project.images.map((img, i) => (
-            <div key={i} style={{
-              aspectRatio: '4/3',
-              position: 'relative',
-              background: '#141414',
-            }}>
-              <ImageWithFallback
-                src={img}
-                alt={`${project.title} ${i + 1}`}
-                fill
-                style={{ objectFit: 'cover' }}
-                fallbackText={`${project.title} ${i + 1}`}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      <ProjectImageLightbox images={project.images} title={project.title} />
 
       <div style={{
         display: 'flex',
