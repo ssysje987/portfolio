@@ -31,29 +31,86 @@ export default function ProjectPage({ params }: Props) {
   return (
     <div style={{ background: '#0A0A0A', minHeight: '100vh', color: '#FFFFFF' }}>
 
-      <div style={{ padding: '80px 80px 48px', borderBottom: '0.5px solid #2A2A2A' }}>
-        <Link href="/work" style={{
-          display: 'inline-block', fontSize: '11px',
-          letterSpacing: '0.25em', color: '#FFFFFF',
-          textDecoration: 'none', marginBottom: '32px',
-        }}>
-          ← BACK TO WORK
-        </Link>
-        <div style={{
-          fontSize: '12px', letterSpacing: '0.35em',
-          color: '#A5B4FC', marginBottom: '16px', fontWeight: 500,
-        }}>
-          {project.label}
+      <div className="project-detail-intro">
+        <div className="project-detail-intro-grid">
+          <div>
+            <Link href="/work" style={{
+              display: 'inline-block', fontSize: '11px',
+              letterSpacing: '0.25em', color: '#FFFFFF',
+              textDecoration: 'none', marginBottom: '40px',
+            }}>
+              ← BACK TO WORK
+            </Link>
+            <div style={{
+              fontSize: '12px', letterSpacing: '0.35em',
+              color: '#A5B4FC', marginBottom: '20px', fontWeight: 500,
+            }}>
+              {project.label}
+            </div>
+            <h1 style={{
+              fontSize: '52px', fontWeight: 600,
+              lineHeight: 1, marginBottom: '12px',
+            }}>
+              {project.title}
+            </h1>
+            {project.titleKo !== project.title && (
+              <div style={{ fontSize: '16px', color: '#FFFFFF', marginBottom: '8px' }}>
+                {project.titleKo}
+              </div>
+            )}
+          </div>
+
+          <div className="project-overview-panel">
+            <div style={{
+              fontSize: '12px', letterSpacing: '0.35em',
+              color: '#A5B4FC', marginBottom: '12px', fontWeight: 500,
+            }}>
+              PROJECT OVERVIEW
+            </div>
+            <p style={{
+              fontSize: '15px',
+              color: '#FFFFFF',
+              lineHeight: 1.8,
+              fontWeight: 300,
+              whiteSpace: 'pre-line',
+              margin: 0,
+            }}>
+              {project.description}
+            </p>
+          </div>
         </div>
-        <h1 style={{
-          fontSize: '52px', fontWeight: 600,
-          lineHeight: 1, marginBottom: '12px',
-        }}>
-          {project.title}
-        </h1>
-        {project.titleKo !== project.title && (
-          <div style={{ fontSize: '16px', color: '#FFFFFF', marginBottom: '8px' }}>
-            {project.titleKo}
+
+        {project.detail && (
+          <div className="project-detail-body-grid">
+            <div />
+            <div className="project-detail-body">
+              <p style={{
+                fontSize: '15px',
+                color: '#FFFFFF',
+                lineHeight: 1.95,
+                fontWeight: 300,
+                whiteSpace: 'pre-line',
+                margin: 0,
+              }}>
+                {project.detail}
+              </p>
+              {project.tags && project.tags.length > 0 && (
+                <div className="project-detail-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag} style={{
+                      display: 'inline-block',
+                      fontSize: '11px',
+                      letterSpacing: '0.2em',
+                      color: '#FFFFFF',
+                      border: '0.5px solid #2A2A2A',
+                      padding: '6px 12px',
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>
@@ -66,46 +123,6 @@ export default function ProjectPage({ params }: Props) {
           style={{ objectFit: 'cover' }}
           fallbackText={project.title}
         />
-      </div>
-
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: project.tags && project.tags.length > 0 ? '3fr 2fr' : '1fr',
-        padding: '80px',
-        borderBottom: '0.5px solid #2A2A2A',
-      }}>
-        <div style={{ paddingRight: project.tags && project.tags.length > 0 ? '48px' : '0' }}>
-          <div style={{
-            fontSize: '12px', letterSpacing: '0.35em',
-            color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
-          }}>
-            PROJECT OVERVIEW
-          </div>
-          <p style={{ fontSize: '16px', color: '#FFFFFF', lineHeight: 1.9, fontWeight: 300, whiteSpace: 'pre-line' }}>
-            {project.description}
-          </p>
-        </div>
-        {project.tags && project.tags.length > 0 && (
-          <div style={{ borderLeft: '0.5px solid #2A2A2A', paddingLeft: '48px' }}>
-            <div style={{
-              fontSize: '12px', letterSpacing: '0.35em',
-              color: '#A5B4FC', marginBottom: '24px', fontWeight: 500,
-            }}>
-              DESIGN LANGUAGE
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {project.tags.map((tag) => (
-                <span key={tag} style={{
-                  display: 'inline-block', fontSize: '12px',
-                  letterSpacing: '0.2em', color: '#FFFFFF',
-                  border: '0.5px solid #2A2A2A', padding: '6px 12px',
-                }}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
 
       <ProjectImageLightbox images={project.images} title={project.title} />
