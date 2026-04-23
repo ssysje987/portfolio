@@ -57,8 +57,8 @@ export default function Home() {
             marginBottom: '32px',
             letterSpacing: '0.02em',
           }}>
-            리테일 경험을 바탕으로 브랜드 공간을 설계하는{' '}
-            <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
+            리테일 경험을 바탕으로<br />
+            브랜드 공간을 설계하는 <span style={{ color: '#A5B4FC' }}>공간 디자이너</span>
           </h2>
           <p style={{
             fontSize: '14px',
