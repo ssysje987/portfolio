@@ -58,6 +58,17 @@ export default function ProjectPage({ params }: Props) {
                 {project.titleKo}
               </div>
             )}
+            {project.contribution && (
+              <div style={{
+                display: 'inline-block',
+                fontSize: '13px',
+                color: '#FFFFFF',
+                fontWeight: 600,
+                marginTop: '6px',
+              }}>
+                {project.contribution}
+              </div>
+            )}
           </div>
 
           <div className="project-overview-panel">

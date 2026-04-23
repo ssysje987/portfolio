@@ -7,6 +7,7 @@ export type Project = {
   label: string
   description: string
   detail?: string
+  contribution?: string
   thumbnail: string
   images: string[]
   tags?: string[]
@@ -62,6 +63,7 @@ export const projects: Project[] = [
     label: 'SI INTERIOR',
     description: '공간 디자인 기획',
     detail: '이탈리아 남성복 편집 브랜드의 고급스럽고 위트 있는 클래식 무드를 공간으로 해석했습니다.\n스톤 도장과 헤어라인 서스 집기로 절제된 세련미를 만들고, 레드 스웨이드 카펫과 플로럴 패턴으로 브랜드 포인트를 더했습니다.\n레이아웃 검토부터 협력업체 커뮤니케이션, 오픈 실행까지 브랜드 공간 기획 전반을 담당했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/atpco-main.jpg',
     images: [
       '/images/atpco-01.jpg',
@@ -83,6 +85,7 @@ export const projects: Project[] = [
     label: 'SI INTERIOR',
     description: '공간 디자인 기획',
     detail: '로로피아나 가문이 설립한 이탈리아 럭셔리 브랜드의 글로벌 인테리어 매뉴얼을 국내 백화점 환경에 맞게 현지화한 프로젝트입니다.\n요트 갑판에서 출발한 디자인 콘셉트를 바탕으로 집기 구성과 동선을 조율하고, 백화점 MD 요구사항을 반영했습니다.\n세일링 로프 오브제를 더해 브랜드가 지닌 세일링 무드와 아이덴티티가 공간에서 선명하게 읽히도록 했습니다.',
+    contribution: '기여도 70%',
     thumbnail: '/images/sease-main.jpg',
     images: [
       '/images/sease-01.jpg',
@@ -102,6 +105,7 @@ export const projects: Project[] = [
     label: 'SI INTERIOR',
     description: '공간 디자인 기획',
     detail: '기존 올포유 매장의 인상을 환기하고 여성 고객에게 맞는 새로운 이미지를 제안한 여성복 특화 매장입니다.\n아이보리 톤 마감, 우드 벽장, 플랜테리어를 중심으로 부드럽고 현대적인 무드를 만들었습니다.\n간결한 집기와 여유로운 동선으로 편안하고 세련된 쇼핑 경험을 구성했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/allforyou-lady-main.jpg',
     images: [
       '/images/allforyou-lady-01.jpg',
@@ -121,6 +125,7 @@ export const projects: Project[] = [
     label: 'SI INTERIOR',
     description: '공간 디자인 기획',
     detail: '기존 쇼룸형 공간을 브랜드 경험과 판매 기능이 함께 작동하는 체험형 리테일 공간으로 리뉴얼한 프로젝트입니다.\n화장품을 포함한 상품군 확장에 맞춰 고객이 공간을 탐색하며 제품을 자연스럽게 발견하도록 구성했습니다.\n사다리 형태의 벽체, 원형 코스메틱 존, 컬러감 있는 선반 요소를 적용해 공간에 리듬감과 시각적 재미를 더했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/mommy-bird-main.jpg',
     images: [
       '/images/mommy-bird-01.jpg',
@@ -139,6 +144,7 @@ export const projects: Project[] = [
     label: 'FIXTURE DESIGN',
     description: '집기 설계 · 제작',
     detail: 'THE OPEN의 상징적인 심볼을 모티브로 한 DP 테이블 디자인입니다.\n원형과 곡선 요소를 입체적으로 재해석하고, 반복되는 메탈 라인과 파동감 있는 조형을 적용했습니다.\n단순 진열을 넘어 브랜드 인상을 직관적으로 전달하는 오브제형 디스플레이로 기획했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/the-open-fixture-main.jpg',
     images: [
       '/images/the-open-fixture-01.jpg',
@@ -156,6 +162,7 @@ export const projects: Project[] = [
     label: 'POP-UP',
     description: '팝업 스토어 기획 · 연출',
     detail: 'AT.P.CO 팝업스토어 오픈 연출로, 입점 브랜드들이 조화롭게 보이면서도 각자의 무드가 드러나도록 구성했습니다.\n정제된 집기와 오픈 동선, 영상 디스플레이와 사인 요소를 활용해 팝업의 주목도와 상품 집중도를 높였습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/popup-main.jpg',
     images: [
       '/images/popup-01.jpg',
@@ -172,6 +179,7 @@ export const projects: Project[] = [
     label: 'VP',
     description: 'VP 공간 연출',
     detail: 'AT.P.CO 더현대서울 매장의 VP 연출로, 미노론조니의 헤리티지와 가죽 전문성을 전달하는 데 집중했습니다.\n버건디·브라운 계열 집기, 1953 그래픽, 실제 가죽 샘플을 담은 아크릴 오브제를 활용했습니다.\n아틀리에적인 분위기와 장인적인 감도가 자연스럽게 느껴지도록 브랜드 스토리를 시각화했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/atpco-vp-main.jpg',
     images: [
       '/images/atpco-vp-01.jpg',
@@ -189,6 +197,7 @@ export const projects: Project[] = [
     label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     detail: 'THE OPEN의 헤리티지와 클래식한 스포츠 무드를 전달하기 위해 쇼룸 조닝과 연출을 기획했습니다.\n상품 디스플레이, 마네킹 스타일링, 신규 집기와 소도구 개발, 비주얼 제작까지 전반을 구성했습니다.\n체크 패턴, 브랜드 컬러, 골프 모티브 소품으로 아이덴티티가 일관되게 읽히도록 연출했습니다.',
+    contribution: '기여도 90%',
     thumbnail: '/images/the-open-showroom-main.jpg',
     images: [
       '/images/the-open-showroom-01.jpg',
@@ -212,6 +221,7 @@ export const projects: Project[] = [
     label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     detail: '올포유 쇼룸의 시즌 방향성과 상품 구성을 한눈에 읽을 수 있도록 공간 흐름을 정리한 연출 프로젝트입니다.\n메인 존과 상품군별 구역을 분리해 시선을 유도하고, 집기와 스타일링의 밀도를 조정해 브랜드 이미지를 선명하게 만들었습니다.\n방문자가 시즌 무드와 핵심 상품을 자연스럽게 이해하도록 쇼룸 경험을 구성했습니다.',
+    contribution: '기여도 100%',
     thumbnail: '/images/allforyou-showroom-main.jpg',
     images: [
       '/images/allforyou-showroom-01.jpg',
@@ -235,6 +245,7 @@ export const projects: Project[] = [
     label: 'SHOWROOM',
     description: '쇼룸 공간 연출',
     detail: 'O’NEILL의 서프·아웃도어 라이프스타일을 공간 안에서 직관적으로 전달한 쇼룸 연출입니다.\n비치, 트레일, 스포츠 무드를 존별로 구성하고 그래픽, 소도구, 마네킹 스타일링을 함께 설계했습니다.\n메인 존에는 폴리카보네이트 벽체를 적용해 청량하고 세련된 공간감을 더했습니다.',
+    contribution: '기여도 70%',
     thumbnail: '/images/oneill-showroom-main.jpg',
     images: [
       '/images/oneill-showroom-01.jpg',
@@ -252,6 +263,7 @@ export const projects: Project[] = [
     label: 'WINDOW',
     description: '윈도우 디스플레이',
     detail: '마르지엘라 컬렉션 영상의 무드에서 착안한 윈도우 디스플레이입니다.\n흘러내리는 초와 흐트러진 천의 질감으로 해체주의적인 이미지를 만들고, 확산되는 빛으로 몽환적인 장면을 구성했습니다.\n흑백 패션 필름을 투사해 뉴트로한 감성을 더하고 중앙 오브제가 상징적으로 보이도록 연출했습니다.',
+    contribution: '개인 프로젝트',
     thumbnail: '/images/margiela-main.jpg',
     images: [
       '/images/margiela-01.jpg',
@@ -270,6 +282,7 @@ export const projects: Project[] = [
     label: 'WINDOW',
     description: '윈도우 디스플레이',
     detail: '전통 목구조의 짜임과 한옥 지붕 서까래의 반복성에서 영감을 받은 윈도우 디스플레이입니다.\n반복되는 목재 구조와 대칭 구성을 통해 공간에 리듬감과 입체감을 만들었습니다.\n내추럴한 우드 소재와 부드러운 컬러의 상품을 조화시켜 따뜻하면서도 절제된 분위기를 표현했습니다.',
+    contribution: '개인 프로젝트',
     thumbnail: '/images/cos-main.jpg',
     images: [
       '/images/cos-01.jpg',
