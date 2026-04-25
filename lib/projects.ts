@@ -42,7 +42,7 @@ export const projects: Project[] = [
     label: 'Interior Design',
     description: '개인 프로젝트',
     detail: '반포 래미안 안에서 도예가 부부의 삶과 작품, 쉼이 공존하는 주거 공간입니다.\n공적 영역과 사적 영역의 밀도를 다르게 두고, 월넛과 포세린 타일 등 재료의 톤으로 시각적 자극을 낮췄습니다.\n현관, 거실, 갤러리형 다이닝, 서재, 마스터룸이 깊어질수록 차분해지는 흐름을 설계했습니다.',
-    thumbnail: '/images/ceramist-main.png',
+    thumbnail: '/images/ceramist-main.jpg',
     images: [
       '/images/ceramist-01.jpg',
       '/images/ceramist-02.jpg',
@@ -52,6 +52,8 @@ export const projects: Project[] = [
       '/images/ceramist-06.jpg',
       '/images/ceramist-07.jpg',
       '/images/ceramist-08.jpg',
+      '/images/ceramist-09.jpg',
+      '/images/ceramist-10.jpg',
     ],
   },
   {
