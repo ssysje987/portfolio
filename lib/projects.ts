@@ -30,6 +30,8 @@ export const projects: Project[] = [
       '/images/node-03.jpg',
       '/images/node-04.jpg',
       '/images/node-05.jpg',
+      '/images/node-06.jpg',
+      '/images/node-07.jpg',
     ],
     tags: ['INDUSTRIAL', 'Y2K REVIVAL', 'TACTILE OASIS'],
   },
