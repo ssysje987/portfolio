@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getProjectBySlug, projects } from '@/lib/projects'
+import { getProjectBySlug, getVisibleProjects } from '@/lib/projects'
 import ImageWithFallback from '@/components/ImageWithFallback'
 import ProjectImageLightbox from '@/components/project/ProjectImageLightbox'
 
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }))
+  return getVisibleProjects().map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -25,8 +25,9 @@ export default function ProjectPage({ params }: Props) {
   const project = getProjectBySlug(params.slug)
   if (!project) notFound()
 
-  const currentIndex = projects.findIndex((p) => p.slug === params.slug)
-  const nextProject = projects[currentIndex + 1] ?? null
+  const visibleProjects = getVisibleProjects()
+  const currentIndex = visibleProjects.findIndex((p) => p.slug === params.slug)
+  const nextProject = visibleProjects[currentIndex + 1] ?? null
 
   return (
     <div style={{ background: '#0A0A0A', minHeight: '100vh', color: '#FFFFFF' }}>

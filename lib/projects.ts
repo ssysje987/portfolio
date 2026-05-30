@@ -3,7 +3,7 @@ export type Project = {
   title: string
   titleKo: string
   year: number
-  category: 'featured' | 'space' | 'vmd'
+  category: 'space' | 'vmd'
   label: string
   description: string
   detail?: string
@@ -14,54 +14,6 @@ export type Project = {
 }
 
 export const projects: Project[] = [
-  {
-    slug: 'node',
-    title: 'NODE',
-    titleKo: '서브컬쳐의 연결점',
-    year: 2026,
-    category: 'featured',
-    label: 'COMMERCIAL INTERIOR',
-    description: '스케이트 컬처 · 스트리트웨어 · 뮤직 · 카페가 하나의 연결점에서 교차하는 체류형 컬처 허브.\n서울 중구 을지로3가.',
-    detail: '센터바를 중심으로 패션, 음악, 카페가 자연스럽게 교차하도록 구성한 복합 리테일 공간입니다.\n원형 센터바는 운영과 체류의 중심으로, 디스플레이 존과 카페 존을 하나의 흐름 안에서 연결합니다.\n유기적인 가구와 구조적인 파이프, 소재 대비를 통해 자유로움과 질서가 공존하는 컬처 허브의 인상을 만들었습니다.',
-    thumbnail: '/images/node-main.jpg',
-    images: [
-      '/images/node-01.jpg',
-      '/images/node-02.jpg',
-      '/images/node-03.jpg',
-      '/images/node-04.jpg',
-      '/images/node-05.jpg',
-      '/images/node-06.jpg',
-      '/images/node-07.jpg',
-      '/images/node-08.jpg',
-      '/images/node-09.jpg',
-      '/images/node-10.jpg',
-      '/images/node-11.jpg',
-    ],
-    tags: ['INDUSTRIAL', 'Y2K REVIVAL', 'TACTILE OASIS'],
-  },
-  {
-    slug: 'house-of-ceramist',
-    title: '도예가의 하우스',
-    titleKo: '도예가의 하우스',
-    year: 2023,
-    category: 'space',
-    label: 'Interior Design',
-    description: '개인 프로젝트',
-    detail: '반포 래미안 안에서 도예가 부부의 삶과 작품, 쉼이 공존하는 주거 공간입니다.\n공적 영역과 사적 영역의 밀도를 다르게 두고, 월넛과 포세린 타일 등 재료의 톤으로 시각적 자극을 낮췄습니다.\n현관, 거실, 갤러리형 다이닝, 서재, 마스터룸이 깊어질수록 차분해지는 흐름을 설계했습니다.',
-    thumbnail: '/images/ceramist-main.jpg',
-    images: [
-      '/images/ceramist-01.jpg',
-      '/images/ceramist-02.jpg',
-      '/images/ceramist-03.jpg',
-      '/images/ceramist-04.jpg',
-      '/images/ceramist-05.jpg',
-      '/images/ceramist-06.jpg',
-      '/images/ceramist-07.jpg',
-      '/images/ceramist-08.jpg',
-      '/images/ceramist-09.jpg',
-      '/images/ceramist-10.jpg',
-    ],
-  },
   {
     slug: 'atpco',
     title: 'AT.P.CO',
@@ -299,12 +251,12 @@ export const projects: Project[] = [
   },
 ]
 
-export function getProjectBySlug(slug: string) {
-  return projects.find((p) => p.slug === slug) ?? null
+export function getVisibleProjects() {
+  return projects
 }
 
-export function getFeaturedProject() {
-  return projects.find((p) => p.category === 'featured') ?? null
+export function getProjectBySlug(slug: string) {
+  return projects.find((p) => p.slug === slug) ?? null
 }
 
 export function getSpaceProjects() {

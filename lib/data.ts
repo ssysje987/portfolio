@@ -15,22 +15,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "node",
-    title: "NODE",
-    subtitle: "공간과 브랜드의 교차점",
-    category: "상업공간",
-    year: "2024",
-    client: "NODE Seoul",
-    description:
-      "도시 속 복합문화공간 NODE의 공간 디자인. 브랜드 아이덴티티를 물리적 공간으로 번역하는 작업으로, 빛과 소재의 레이어링을 통해 다층적인 경험을 구성했습니다.",
-    concept:
-      "NODE는 연결이라는 개념을 공간적으로 해석합니다. 동선의 교차, 시선의 연결, 소재의 조합—모든 요소가 하나의 유기적인 네트워크를 형성합니다.",
-    tags: ["공간 디자인", "브랜딩", "인테리어", "조명 계획"],
-    featured: true,
-    size: "large",
-    accentColor: "#1a499d",
-  },
-  {
     slug: "maison-k",
     title: "MAISON K",
     subtitle: "럭셔리 플래그십 스토어",

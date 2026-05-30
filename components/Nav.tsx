@@ -18,17 +18,19 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { label: 'ABOUT ME', href: '/' },
     { label: 'WORK', href: '/work' },
   ];
 
+  const isActive = (href: string) =>
+    href === '/work' && (pathname === '/' || pathname === '/work' || pathname.startsWith('/work/'));
+
   const linkClass = (href: string) =>
     'text-[12px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
-    (pathname === href ? 'text-white' : 'text-white hover:text-white');
+    (isActive(href) ? 'text-white' : 'text-white hover:text-white');
 
   const mobileLinkClass = (href: string) =>
     'mb-6 text-[32px] font-medium uppercase tracking-[0.25em] transition-colors duration-200 ' +
-    (pathname === href ? 'text-white' : 'text-white hover:text-white');
+    (isActive(href) ? 'text-white' : 'text-white hover:text-white');
 
   let navClasses = 'sticky top-0 z-50 border-b border-[#2A2A2A] ';
   navClasses += scrolled ? 'bg-[#0A0A0A]/95 backdrop-blur ' : 'bg-[#0A0A0A] ';
